@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 15:43:38 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/13 16:06:21 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/13 16:51:35 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@ typedef struct
 	int	size;
 }	t_stack;
 
-void	ft_sa(int* a)
+void	ft_sa(t_stack* a)
 {
+	if(a->size <= 2)
+		return ;
 	ft_swap(&a[0], &a[1]);
 	write(1, "sa\n", 3);
 }
