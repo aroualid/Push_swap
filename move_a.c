@@ -6,23 +6,17 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 15:43:38 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/13 16:51:35 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/14 10:51:43 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-typedef struct
-{
-	int	*data;
-	int	size;
-}	t_stack;
-
 void	ft_sa(t_stack* a)
 {
 	if(a->size <= 2)
 		return ;
-	ft_swap(&a[0], &a[1]);
+	ft_swap(&a->data[0], &a->data[1]);
 	write(1, "sa\n", 3);
 }
 
