@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 15:43:38 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/14 10:52:53 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/14 11:57:59 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_sb(t_stack* b)
 	ft_swap(&b->data[0], &b->data[1]);
 	write(1, "sb\n", 3);
 }
-
+ 
 void	ft_pb(t_stack *b, t_stack *a)
 {
 	int	temp;

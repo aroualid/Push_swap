@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 15:32:40 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/14 10:07:15 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/14 12:03:57 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,7 @@ void	ft_sb(t_stack* b);
 void	ft_pb(t_stack *b, t_stack *a);
 void	ft_rb(t_stack *b);
 void	ft_rrb(t_stack *b);
+void	ft_ss(t_stack* a,t_stack* b);
+void	ft_rr(t_stack* a,t_stack* b);
+void	ft_rrr(t_stack* a,t_stack* b);
 #endif
