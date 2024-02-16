@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/05 15:43:38 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/14 13:22:05 by aroualid         ###   ########.fr       */
+/*   Created: 2024/02/16 11:36:00 by aroualid          #+#    #+#             */
+/*   Updated: 2024/02/16 11:50:35 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ void	ft_pb(t_stack *b, t_stack *a)
 	if (a->size == 0)
 		return ;
 	temp = a->data[0];
-	ft_memmove (a->data, a->data + 1, a->size);
+	ft_memmove(a->data, a->data + 1, a->size);
 	a->size--;
-	ft_memmove (b->data + 1, b->data, b->size);
+	ft_memmove(b->data + 1, b->data, b->size);
 	b->data[0] = temp;
 	b->size++;
 	write(1, "pb\n", 3);
