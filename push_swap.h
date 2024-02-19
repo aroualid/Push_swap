@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 15:32:40 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/14 13:24:55 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/19 16:31:59 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ typedef struct t_stack
 }	t_stack;
 
 void	ft_swap(int *a, int *b);
-void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	ft_sa(t_stack *a);
 void	ft_pa(t_stack *a, t_stack *b);
 void	ft_ra(t_stack *a);
@@ -35,5 +34,6 @@ void	ft_rrb(t_stack *b);
 void	ft_ss(t_stack *a, t_stack *b);
 void	ft_rr(t_stack *a, t_stack *b);
 void	ft_rrr(t_stack *a, t_stack *b);
-
+void	check_arg(int	ac, char *av[]);
+int		ft_is_quote(char *str);
 #endif
