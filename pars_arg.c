@@ -6,10 +6,9 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 13:20:32 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/19 16:50:02 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/22 15:23:25 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "push_swap.h"
 
@@ -27,21 +26,102 @@ int	is_quote(char *str)
 	return (0);
 }
 
-void	check_arg(int	ac, char *av[])
+int	count_arg_in_quote(char *av[])
+{
+	int	i;
+	int	j;
+	int	count;
+
+	i = 0;
+	j = 0;
+	count = 0;
+	if (is_quote(av[i]) == 1)
+	{
+		while (av[i][j])
+		{
+			while (av[i][j] && av[i][j] == ' ')
+				j++;
+			if (av[i][j] == '\0')
+				break ;
+			count++;
+			while (av[i][j] && av[i][j] != ' ')
+				j++;
+		}
+	}
+	else
+		i++;
+	return (count);
+}
+
+
+int nb_of_quote(char *av[])
+{
+	int	i;
+	int	count;
+
+	i = 0;
+	count = 0;
+	if (is_quote(av[i]) == 1)
+	{
+		count++;
+		i++;
+	}
+	else
+		i++;
+	return (count);
+}
+
+int size_to_malloc(int ac, char *av[])
+{
+	int total;
+	int	total_arg_in_quote;
+	int total_quote;
+	int	i;
+	
+	i = 1;
+	while (i < ac)
+	{	
+		total_arg_in_quote = count_arg_in_quote(av[i]);
+		total_quote = nb_of_quote(av[i]);
+		i++;
+	}																	
+	total = (ac - 1 - total_quote + total_of_arg_in_quote);
+	return (total);
+}
+
+char **check_arg(int ac, char *av[])
 {
 	int		i;
+	int		j;
 	char	**str;
+	char	**tmp;
 
 	i = 1;
+	j = 0;
 	while (i < ac)
 	{
 		if (is_quote(av[i]) == 1)
 		{
-			str = (ft_split(av[1], ' '));
+			tmp = (ft_split(av[i], ' '));
+			str[j] = tmp[j];
 		}
 		else
-		{
-			str = 
+			str[j] = av[i];
+		j++;
+		i++;
 	}
+	str[j] = NULL;
+	return (str);
 }
 
+int	main(int ac, char **av)
+{
+	char **str = NULL;
+	int i = 0;
+	str = check_arg(ac, av);
+	while (str[i] != NULL)
+	{
+		printf("%s\n", str[i]);
+		i++;
+	}
+}

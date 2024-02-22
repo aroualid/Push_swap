@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 15:32:40 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/19 16:31:59 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/22 15:23:15 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <unistd.h>
 # include "libft/libft.h"
-
+# include <stdio.h>
 typedef struct t_stack
 {
 	int	*data;
@@ -34,6 +34,10 @@ void	ft_rrb(t_stack *b);
 void	ft_ss(t_stack *a, t_stack *b);
 void	ft_rr(t_stack *a, t_stack *b);
 void	ft_rrr(t_stack *a, t_stack *b);
-void	check_arg(int	ac, char *av[]);
-int		ft_is_quote(char *str);
+char	**check_arg(int	ac, char *av[]);
+int		is_quote(char *str);
+int		nb_of_quote(char *av[]);
+int		count_arg_in_quote(char *av[]);
+int		size_to_malloc(int ac, char *av[]);
+
 #endif
