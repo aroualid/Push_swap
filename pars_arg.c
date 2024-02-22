@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 13:20:32 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/22 15:23:25 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/22 20:04:48 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,33 +81,60 @@ int size_to_malloc(int ac, char *av[])
 	i = 1;
 	while (i < ac)
 	{	
-		total_arg_in_quote = count_arg_in_quote(av[i]);
-		total_quote = nb_of_quote(av[i]);
+		total_arg_in_quote = count_arg_in_quote(&av[i]);
+		total_quote = nb_of_quote(&av[i]);
 		i++;
 	}																	
-	total = (ac - 1 - total_quote + total_of_arg_in_quote);
+	total = (ac - 1 - total_quote + total_arg_in_quote); 
 	return (total);
 }
 
+/*char **parse_quote(char *av[])
+{
+	
+		if (is_quote(av[i]) == 1)
+		{
+			tmp = (ft_split(av[i], ' '));
+			while (tmp[k] != NULL)
+			{	
+				str[j] = tmp[k];
+				j++;
+				k++;
+			}
+			k = 0;
+	}
+}*/
+	
 char **check_arg(int ac, char *av[])
 {
 	int		i;
 	int		j;
+	int		k;
 	char	**str;
 	char	**tmp;
 
 	i = 1;
 	j = 0;
+	k = 0;
+	str = malloc(sizeof (int) * size_to_malloc(ac, av));
 	while (i < ac)
 	{
 		if (is_quote(av[i]) == 1)
 		{
 			tmp = (ft_split(av[i], ' '));
-			str[j] = tmp[j];
-		}
+			while (tmp[k] != NULL)
+			{	
+				str[j] = tmp[k];
+				j++;
+				k++;
+			}
+			k = 0;
+		}	
 		else
+		{
 			str[j] = av[i];
-		j++;
+			j++;
+		}
 		i++;
 	}
 	str[j] = NULL;
