@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 13:20:32 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/23 13:57:04 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/23 15:46:52 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ int	size_to_malloc(int ac, char *av[])
 	return (total);
 }
 
-char	**check_arg(int ac, char *av[])
+char	**check_arg(int ac, char *av[], int *len)
 {
 	int		i;
 	int		j;
@@ -114,5 +114,5 @@ char	**check_arg(int ac, char *av[])
 		i++;
 	}
 	str[j] = NULL;
-	return (str);
+	return (*len = j, str);
 }
