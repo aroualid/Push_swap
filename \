@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 13:59:49 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/24 17:38:39 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/24 17:20:18 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,10 +72,7 @@ int	check_sort(long *num, int ac)
 	i = 0;
 	count = 1;
 	if (ac == 1)
-	{
-		write(1, "Error\n", 6);
-		return (1) ;
-	}
+		return (false);
 	while (num[i])
 	{
 		if (num[i] < num[i + 1])
@@ -83,11 +80,8 @@ int	check_sort(long *num, int ac)
 	i++;
 	}
 	if (count == ac)
-	{
-		write(1, "Error\n", 6);
-		return (0);
-	}
-	return (1);
+		return (false);
+	return (true);
 }
 
 int	check_duplicate(long *num)
@@ -102,16 +96,13 @@ int	check_duplicate(long *num)
 		while (num[i])
 		{
 			if(num[j] == num[i])
-			{
-				write(1, "Error\n", 6);
-				return (false);
-			}
+				return (true);
 		i++;
 		}
+	i = j;
 	j++;
-	i = j + 1;
 	}
-	return (true);
+	return (false);
 }
 
 
@@ -133,11 +124,12 @@ int    main(int ac, char **av)
             printf("%s", "la taille de : '");
             printf("%li", dtr[i]);
             printf("%s", "' est de : ");
-            printf("%d\n", len_of_num(dtr[i]));
-            check_overflow(dtr[i]);
+            printf("%d", len_of_num(dtr[i]));
+            printf("   le nombre overflow ? : %s\n", check_overflow(dtr[i]) ? "non" : "oui");
             i++;
         }
-            check_sort(dtr, ac - 1);
-			check_duplicate(dtr);
+            printf("la liste est trie ? : %s\n", check_sort(dtr, ac - 1) ? "non" : "oui");
+			printf("la liste a des doublons ? : %s\n", check_duplicate(dtr) ? "non" : "oui");
+
 	}
 }

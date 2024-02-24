@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 15:32:40 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/23 16:04:13 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/24 17:17:50 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@
 # include <unistd.h>
 # include "libft/libft.h"
 # include <stdio.h>
+# include <stdbool.h>
 typedef struct t_stack
+
 {
 	int	*data;
 	int	size;
@@ -40,5 +42,10 @@ int		nb_of_quote(char *av[]);
 int		size_to_malloc(int ac, char *av[]);
 char	**check_arg(int	ac, char *av[], int *len);
 int		check_if_no_digit(char **str);
-int		*check_good_arg(char **str, int ac, char *av[]);
+long	*check_good_arg(char **str, int ac, char *av[]);
+int		len_of_num(long	num);
+int		check_overflow(long int num);
+int		check_sort(long *num, int ac);
+int		check_duplicate(long *num);
+
 #endif
