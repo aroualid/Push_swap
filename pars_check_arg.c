@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pars_check_arg.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 13:59:49 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/24 17:38:39 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/25 20:14:22 by ari              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,24 +43,21 @@ int	check_if_no_digit(char **str)
 long	*check_good_arg(char **str, int ac, char *av[])
 {
 	int		i;
-	long	*dtr;
+	long	*num;
 	char	**test;
 
-	dtr = malloc (sizeof (char *) * (size_to_malloc(ac, av) + 1));
+	num = malloc (sizeof (char *) * (size_to_malloc(ac, av) + 1));
 	i = 0;
 	if (check_if_no_digit(str) == false)
-	{
-		write(1, "Error\n", 6);
 		return (false);
-	}		
 	else
 	{
 		while (str[i] != NULL)
 		{
-			dtr[i] = ft_atoi(str[i]);
+			num[i] = ft_atoi(str[i]);
 			i++;
 		}
-		return (dtr);
+		return (num);
 	}
 }
 
@@ -74,7 +71,7 @@ int	check_sort(long *num, int ac)
 	if (ac == 1)
 	{
 		write(1, "Error\n", 6);
-		return (1) ;
+		return (false) ;
 	}
 	while (num[i])
 	{
@@ -83,11 +80,8 @@ int	check_sort(long *num, int ac)
 	i++;
 	}
 	if (count == ac)
-	{
-		write(1, "Error\n", 6);
-		return (0);
-	}
-	return (1);
+		return (false);
+	return (true);
 }
 
 int	check_duplicate(long *num)
@@ -102,10 +96,7 @@ int	check_duplicate(long *num)
 		while (num[i])
 		{
 			if(num[j] == num[i])
-			{
-				write(1, "Error\n", 6);
 				return (false);
-			}
 		i++;
 		}
 	j++;
@@ -114,30 +105,46 @@ int	check_duplicate(long *num)
 	return (true);
 }
 
+int	pars(long *num, int ac)
+{
+	int	i;
+	int	j; 
+	
+	i = 0;
+	j = 0;
+	if 
+	while(num[i])
+	{
+		if (check_overflow(num[i]) == false);
+			write(1, "Error\n")
+	i++;	
+	}
+	if (check_sort(num, ac - 1) == false || (check_duplicate(num) == false))	
+		write(1, "Error\n")
+	return (true);
+}
 
 int    main(int ac, char **av)
 {
   char    **str = NULL;
-  long    *dtr = NULL;
+  long    *num = NULL;
   int    i = 0;
   int   j = 0;
 
   str = check_arg(ac, av, &j);
-  dtr = check_good_arg(str, ac, av);
-    if (dtr == NULL)
+  num = check_good_arg(str, ac, av);
+    if (num == NULL)
         return (1);
     else
     {
         while (i < j) 
         {
             printf("%s", "la taille de : '");
-            printf("%li", dtr[i]);
+            printf("%li", num[i]);
             printf("%s", "' est de : ");
-            printf("%d\n", len_of_num(dtr[i]));
-            check_overflow(dtr[i]);
+            printf("%d\n", len_of_num(num[i]));
             i++;
         }
-            check_sort(dtr, ac - 1);
-			check_duplicate(dtr);
+		pars(num, ac);
 	}
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   quote_arg.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 13:20:32 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/23 15:46:52 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/25 20:01:01 by ari              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ int	is_quote(char *str)
 	while (str[i])
 	{
 		if (str[i] == ' ')
-			return (1);
+			return (true);
 		i++;
 	}
-	return (0);
+	return (false);
 }
 
 int	count_arg_in_quote(char *av[])
@@ -35,7 +35,7 @@ int	count_arg_in_quote(char *av[])
 	i = 0;
 	j = 0;
 	count = 0;
-	if (is_quote(av[i]) == 1)
+	if (is_quote(av[i]) == true)
 	{
 		while (av[i][j])
 		{
