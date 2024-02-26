@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 14:18:27 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/24 13:23:40 by aroualid         ###   ########.fr       */
+/*   Updated: 2023/11/23 15:25:46 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 # include <string.h>
 
 // Déclarations des fonctions
-long	ft_atoi(const char *str);
+int		ft_atoi(const char *str);
 void	*ft_calloc(size_t count, size_t size);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

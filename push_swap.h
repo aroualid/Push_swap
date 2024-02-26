@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 15:32:40 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/26 14:06:15 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/26 14:37:42 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,6 @@ long	*check_good_arg(char **str, int ac, char *av[]);
 int		len_of_num(long	num);
 int		check_overflow(long int num);
 int		check_sort(long *num, int ac);
-int		check_duplicate(long *num, int ac);
-int		pars(long *num, int ac);
+int		check_duplicate(long *num);
+
 #endif
