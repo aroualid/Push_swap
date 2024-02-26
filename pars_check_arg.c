@@ -6,7 +6,7 @@
 /*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 13:59:49 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/25 20:14:22 by ari              ###   ########.fr       */
+/*   Updated: 2024/02/26 14:07:06 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,19 +84,24 @@ int	check_sort(long *num, int ac)
 	return (true);
 }
 
-int	check_duplicate(long *num)
+int	check_duplicate(long *num, int ac)
 {
 	int	i;
 	int	j;
 
 	i = 1;
 	j = 0;
+	if (ac == 1)
+		return (false);
 	while (num[j])
 	{
 		while (num[i])
 		{
 			if(num[j] == num[i])
+			{
 				return (false);
+				write(1, "Error\n", 6);
+			}
 		i++;
 		}
 	j++;
@@ -112,15 +117,16 @@ int	pars(long *num, int ac)
 	
 	i = 0;
 	j = 0;
-	if 
+
 	while(num[i])
 	{
-		if (check_overflow(num[i]) == false);
-			write(1, "Error\n")
+		if (check_overflow(num[i]) == false)
+			write(1, "Error\n", 6);
 	i++;	
 	}
-	if (check_sort(num, ac - 1) == false || (check_duplicate(num) == false))	
-		write(1, "Error\n")
+	check_duplicate(num, ac - 1);
+	if (check_sort(num, ac - 1) == false)
+		return (false);
 	return (true);
 }
 
@@ -139,10 +145,11 @@ int    main(int ac, char **av)
     {
         while (i < j) 
         {
-            printf("%s", "la taille de : '");
-            printf("%li", num[i]);
-            printf("%s", "' est de : ");
-            printf("%d\n", len_of_num(num[i]));
+			printf("%li\n", num[i]);
+
+            /*printf("%s", "la taille de : '");
+           printf("%s", "' est de : ");
+            printf("%d\n", len_of_num(num[i])); */
             i++;
         }
 		pars(num, ac);
