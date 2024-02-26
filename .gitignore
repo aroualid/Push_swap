@@ -1,0 +1,7 @@
+*.o
+libft.a
+a.out
+libft-tester
+.vscode
+.dist
+sujet.pdf

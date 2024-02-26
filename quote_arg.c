@@ -6,7 +6,7 @@
 /*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 13:20:32 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/25 20:01:01 by ari              ###   ########.fr       */
+/*   Updated: 2024/02/26 19:29:22 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,26 +26,24 @@ int	is_quote(char *str)
 	return (false);
 }
 
-int	count_arg_in_quote(char *av[])
+int	count_arg_in_quote(char *av)
 {
 	int	i;
-	int	j;
 	int	count;
 
 	i = 0;
-	j = 0;
 	count = 0;
-	if (is_quote(av[i]) == true)
+	if (is_quote(av) == true)
 	{
-		while (av[i][j])
+		while (av[i])
 		{
-			while (av[i][j] && av[i][j] == ' ')
-				j++;
-			if (av[i][j] == '\0')
+			while (av[i] && av[i] == ' ')
+				i++;
+			if (av[i] == '\0')
 				break ;
 			count++;
-			while (av[i][j] && av[i][j] != ' ')
-				j++;
+			while (av[i] && av[i] != ' ')
+				i++;
 		}
 	}
 	else
@@ -53,14 +51,14 @@ int	count_arg_in_quote(char *av[])
 	return (count);
 }
 
-int	nb_of_quote(char *av[])
+int	nb_of_quote(char *av)
 {
 	int	i;
 	int	count;
 
 	i = 0;
 	count = 0;
-	if (is_quote(av[i]) == 1)
+	if (is_quote(av) == 1)
 	{
 		count++;
 		i++;
@@ -78,13 +76,19 @@ int	size_to_malloc(int ac, char *av[])
 	int	i;
 
 	i = 1;
+	total = 0;
+	total_arg_in_quote = 0;
+	total_quote = 0;
 	while (i < ac)
-	{	
-		total_arg_in_quote = count_arg_in_quote(&av[i]);
-		total_quote = nb_of_quote(&av[i]);
+	{
+		if (is_quote(av[i]) == true)
+		{
+			total_arg_in_quote += count_arg_in_quote(av[i]);
+			total_quote += nb_of_quote(av[i]);
+		}
 		i++;
-	}																	
-	total = (ac - 1 - total_quote + total_arg_in_quote);
+	}
+	total = ((ac -1) - total_quote + total_arg_in_quote);
 	return (total);
 }
 
