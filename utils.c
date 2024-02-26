@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 15:32:13 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/26 17:49:27 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/27 00:07:01 by ari              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,3 +21,26 @@ void	ft_swap(int *a, int *b)
 	*b = temp;
 }
 
+int	ft_strcmp(const char *s1, const char *s2)
+{
+    while (*s1 && *s2 && *s1 == *s2) 
+	{
+        s1++;
+        s2++;
+    }
+    return *(unsigned char *)s1 - *(unsigned char *)s2;
+}
+
+int	check_empty_arguments(int ac, char **str)
+{
+    int i;
+	
+	i = 0;;
+    while (i < ac) 
+	{
+        if (ft_strcmp(str[i], "") == 0) 
+			return false;
+        i++; 
+	}
+    return true;
+}
