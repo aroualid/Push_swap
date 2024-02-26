@@ -1,7 +1,6 @@
 *.o
-libft.a
+push_swap
 a.out
-libft-tester
 .vscode
 .dist
 sujet.pdf

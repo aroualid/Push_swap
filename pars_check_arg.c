@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pars_check_arg.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 13:59:49 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/26 19:31:35 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/26 23:30:49 by ari              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,12 @@ int	check_if_no_digit(char **str)
 				if ((str[i][j] == '-' || str[i][j] == '+')
 					&& (ft_isdigit(str[i][j - 1]) == 1
 					|| ft_isdigit(str[i][j + 1]) == 0))
-					return (false);
+					return (write(1, "Error\n", 6), false);
+					
 				j++;
 			}
 			else
-				return (false);
+				return (write(1, "Error\n", 6), false);
 		}
 		i++;
 	}
@@ -63,17 +64,20 @@ int	*check_good_arg(char **str, int ac, char *av[])
 int	check_sort(int *num, int ac, char **str)
 {
 	int	i;
+	int j;
 	int	count;
 	int	total;
 
 	i = 0;
+	j = 1;
 	count = 1;
 	total = size_to_malloc(ac, str);
-	while (num[i])
+	while (num[j])
 	{
-		if (num[i] < num[i + 1])
+		if (num[i] < num[j])
 			count++;
 	i++;
+	j++;
 	}
 	if (count == total)
 	{
@@ -113,12 +117,12 @@ int	pars(int *num, int ac, char **str)
 	int	i;
 	int	j;
 
-	i = 0;
 	j = 0;
+	i = 0;
 	if (ac == 2)
 	{
 		if (size_to_malloc(ac, str) >= ac)
-			return (true);
+			j++;
 		else
 			return (write(1, "Error\n", 6), false);
 	}
