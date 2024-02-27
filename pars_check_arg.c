@@ -6,7 +6,7 @@
 /*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 13:59:49 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/27 00:07:30 by ari              ###   ########.fr       */
+/*   Updated: 2024/02/27 07:40:06 by ari              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,13 +126,14 @@ int	pars(int *num, int ac, char **str)
 		else
 			return (write(1, "Error\n", 6), false);
 	}
-	if (check_sort(num, ac, str) == false || ac == 1)
-		return (false);
 	if (check_duplicate(num, ac, str) == false  || check_empty_arguments(ac, str) == false)
 		return (write(1, "Error\n", 6), false);
+	if (check_sort(num, ac, str) == false || ac == 1)
+		return (false);
+
 	while (num[i])
 	{
-		if (check_overflow(num[i]) == false)2406
+		if (check_overflow(num[i]) == false)
 			return (write(1, "Error\n", 6), false);
 		i++;
 	}

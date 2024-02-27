@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   len_of_num.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 13:24:48 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/26 14:53:28 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/27 00:20:28 by ari              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@ int	len_of_num(long int num)
 
 int	check_overflow(long int num)
 {
-	if (num < 0 && (num < INT_MIN || len_of_num(num) > 11))
+	if (num < 0 && (num < INT_MIN || len_of_num(num) >= 11))
 	{
 		return (false);
 	}
-	if (num >= 0 && (num > INT_MAX || len_of_num(num) > 10))
+	if (num >= 0 && (num > INT_MAX || len_of_num(num) >= 10))
 	{
 		return (false);
 	}
