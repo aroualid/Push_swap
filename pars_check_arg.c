@@ -6,7 +6,7 @@
 /*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 13:59:49 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/27 14:11:00 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/27 15:59:53 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ int	check_if_no_digit(char **str)
 				if ((str[i][j] == '-' || str[i][j] == '+')
 					&& (ft_isdigit(str[i][j - 1]) == 1
 					|| ft_isdigit(str[i][j + 1]) == 0))
-					return (write(1, "Error\n", 6), false);
+					return (false);
 				j++;
 			}
 			else
-				return (write(1, "Error\n", 6), false);
+				return (false);
 		}
 		i++;
 	}
@@ -49,10 +49,11 @@ int	*check_good_arg(int ac, char *av[])
 
 	str = check_arg(ac, av, &j);
 	j = 0;
-	dtr = malloc (sizeof (char **) * (size_to_malloc(ac, av) + 10));
+	dtr = malloc(sizeof (char **) * (size_to_malloc(ac, av) + 1));
 	i = 0;
 
-	if (check_if_no_digit(str) == false || check_over_under_int(ac, av) == 0)
+	if (check_if_no_digit(str) == false
+		|| check_over_under_int(size_to_malloc(ac, av), str) == false)
 	{
 		write(1, "Error\n", 6);
 		return (false);
@@ -130,10 +131,9 @@ int	pars(int *num, int ac, char **str)
 		if (size_to_malloc(ac, str) >= ac)
 			j++;
 		else
-			return (write(1, "Error\n", 6), false);
+			return (false);
 	}
-	if (check_duplicate(num, ac, str) == false
-		|| check_empty_arguments(ac, str) == false)
+	if (check_duplicate(num, ac, str) == false || check_empty_arguments(ac, str) == false)
 		return (write(1, "Error\n", 6), false);
 	if (check_sort(num, ac, str) == false || ac == 1)
 		return (false);

@@ -6,7 +6,7 @@
 /*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 13:20:32 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/26 23:07:33 by ari              ###   ########.fr       */
+/*   Updated: 2024/02/27 16:32:42 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ int	size_to_malloc(int ac, char *av[])
 	return (total);
 }
 
-char	**check_arg(int ac, char *av[], int *len)
+char	**check_arg(int ac, char *av[], int *len) 
 {
 	int		i;
 	int		j;
@@ -103,7 +103,7 @@ char	**check_arg(int ac, char *av[], int *len)
 	i = 1;
 	j = 0;
 	k = 0;
-	str = malloc(sizeof (char *) * (size_to_malloc(ac, av) + 1));
+	str = malloc(sizeof (char *) * (size_to_malloc(ac, av) + 10));
 	while (i < ac)
 	{
 		if (is_quote(av[i]) == 1)

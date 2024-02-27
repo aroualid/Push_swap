@@ -6,7 +6,7 @@
 /*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 15:32:13 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/27 00:07:01 by ari              ###   ########.fr       */
+/*   Updated: 2024/02/27 16:30:50 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,24 +23,34 @@ void	ft_swap(int *a, int *b)
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
-    while (*s1 && *s2 && *s1 == *s2) 
+	while (*s1 && *s2 && *s1 == *s2)
 	{
-        s1++;
-        s2++;
-    }
-    return *(unsigned char *)s1 - *(unsigned char *)s2;
+		s1++;
+		s2++;
+	}
+	return (*(unsigned char *)s1 - *(unsigned char *)s2);
 }
 
 int	check_empty_arguments(int ac, char **str)
 {
-    int i;
-	
-	i = 0;;
-    while (i < ac) 
+	int	i;
+
+	i = 0;
+	while (i < ac)
 	{
-        if (ft_strcmp(str[i], "") == 0) 
-			return false;
-        i++; 
+		if (ft_strcmp(str[i], "") == 0)
+			return (false);
+		i++;
 	}
-    return true;
+	return (true);
 }
+
+int	ft_isspace(int c)
+{
+	if (c == ' ' || c == '\f' || c == '\n' || c == '\r'
+		|| c == '\t' || c == '\v')
+		return (1);
+	return (0);
+}
+
+

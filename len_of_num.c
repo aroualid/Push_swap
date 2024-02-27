@@ -6,7 +6,7 @@
 /*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 13:24:48 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/27 13:56:46 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/27 14:52:35 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int    check_over_under_int(int ac, char **av)
     char    *str;
     char    *arg;
 
-    i = 1;
+    i = 0;
     j = 0;
     while (i < ac)
     {

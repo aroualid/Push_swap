@@ -6,7 +6,7 @@
 /*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 15:32:40 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/27 14:09:28 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/27 16:29:39 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,6 @@ int		skip_zero(char *str);
 int		check_over_under_int(int ac, char **av);
 int		check_over_under_int(int ac, char **av);
 int		ft_skip_zero(char *str);
+int		ft_isspace(int c);
+char	**ft_strtok(char *str, const char *delim);
 #endif
