@@ -6,7 +6,7 @@
 /*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:56:56 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/26 22:57:29 by ari              ###   ########.fr       */
+/*   Updated: 2024/02/27 09:29:52 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 long	ft_atoi(const char *str)
 {
 	int		i;
-	int		sign;
+	long	sign;
 	long	result;
 
 	i = 0;

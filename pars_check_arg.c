@@ -6,7 +6,7 @@
 /*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 13:59:49 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/27 07:40:06 by ari              ###   ########.fr       */
+/*   Updated: 2024/02/27 14:11:00 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ int	check_if_no_digit(char **str)
 					&& (ft_isdigit(str[i][j - 1]) == 1
 					|| ft_isdigit(str[i][j + 1]) == 0))
 					return (write(1, "Error\n", 6), false);
-					
 				j++;
 			}
 			else
@@ -41,15 +40,23 @@ int	check_if_no_digit(char **str)
 	return (true);
 }
 
-int	*check_good_arg(char **str, int ac, char *av[])
+int	*check_good_arg(int ac, char *av[])
 {
-	int	i;
-	int	*dtr;
+	int		i;
+	int		*dtr;
+	char	**str;
+	int		j;
 
+	str = check_arg(ac, av, &j);
+	j = 0;
 	dtr = malloc (sizeof (char **) * (size_to_malloc(ac, av) + 10));
 	i = 0;
-	if (check_if_no_digit(str) == false)
+
+	if (check_if_no_digit(str) == false || check_over_under_int(ac, av) == 0)
+	{
+		write(1, "Error\n", 6);
 		return (false);
+	}
 	else
 	{
 		while (str[i] != NULL)
@@ -64,7 +71,7 @@ int	*check_good_arg(char **str, int ac, char *av[])
 int	check_sort(int *num, int ac, char **str)
 {
 	int	i;
-	int j;
+	int	j;
 	int	count;
 	int	total;
 
@@ -90,12 +97,11 @@ int	check_duplicate(int *num, int ac, char *av[])
 {
 	int	i;
 	int	j;
-	int k; 
+	int	k;
 
 	i = 1;
 	j = 0;
 	k = size_to_malloc(ac, av);
-
 	while (j < k)
 	{
 		while (i < k)
@@ -126,16 +132,11 @@ int	pars(int *num, int ac, char **str)
 		else
 			return (write(1, "Error\n", 6), false);
 	}
-	if (check_duplicate(num, ac, str) == false  || check_empty_arguments(ac, str) == false)
+	if (check_duplicate(num, ac, str) == false
+		|| check_empty_arguments(ac, str) == false)
 		return (write(1, "Error\n", 6), false);
 	if (check_sort(num, ac, str) == false || ac == 1)
 		return (false);
 
-	while (num[i])
-	{
-		if (check_overflow(num[i]) == false)
-			return (write(1, "Error\n", 6), false);
-		i++;
-	}
 	return (true);
 }
