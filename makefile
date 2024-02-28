@@ -3,15 +3,15 @@
 #                                                         :::      ::::::::    #
 #    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+         #
+#    By: ari <ari@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/26 17:33:50 by aroualid          #+#    #+#              #
-#    Updated: 2024/02/26 18:10:01 by aroualid         ###   ########.fr        #
+#    Updated: 2024/02/27 18:44:23 by ari              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = cc
-CFLAGS=-Wall -Wextra -Werror -g3 
+CFLAGS=  #-Wall -Wextra -Werror  -g3 # 
 SRCS = move_a.c pars_check_arg.c quote_arg.c len_of_num.c \
 	   move_a-b.c move_b.c utils.c main.c
 OBJS = $(SRCS:%.c=%.o)

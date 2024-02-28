@@ -6,7 +6,7 @@
 /*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 13:59:49 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/27 16:44:03 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/27 18:40:24 by ari              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,14 +122,14 @@ int	check_duplicate(int *num, int ac, char *av[])
 int	pars(int *num, int ac, char **str)
 {
 	int	i;
-	int	j;
+	// int	j;
 
-	j = 0;
+	// j = 0;
 	i = 0;
 	if (ac == 2)
 	{
 		if (size_to_malloc(ac, str) >= ac)
-			j++;
+			i++;
 		else
 			return (false);
 	}
