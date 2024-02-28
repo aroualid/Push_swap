@@ -6,14 +6,14 @@
 #    By: ari <ari@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/26 17:33:50 by aroualid          #+#    #+#              #
-#    Updated: 2024/02/27 18:44:23 by ari              ###   ########.fr        #
+#    Updated: 2024/02/28 13:06:37 by aroualid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = cc
-CFLAGS=  #-Wall -Wextra -Werror  -g3 # 
+CFLAGS=  -Wall -Wextra -Werror  -g3 
 SRCS = move_a.c pars_check_arg.c quote_arg.c len_of_num.c \
-	   move_a-b.c move_b.c utils.c main.c
+	   move_a-b.c move_b.c utils.c main.c algo_2_num.c
 OBJS = $(SRCS:%.c=%.o)
 NAME = push_swap
 RM = rm -f

@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 11:34:20 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/16 11:34:22 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/28 13:17:09 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_sa(t_stack *a)
 {
-	if (a->size <= 2)
+	if (a->size < 2)
 		return ;
 	ft_swap(&a->data[0], &a->data[1]);
 	write(1, "sa\n", 3);

@@ -6,7 +6,7 @@
 /*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 13:59:49 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/27 18:40:24 by ari              ###   ########.fr       */
+/*   Updated: 2024/02/28 13:12:43 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	*check_good_arg(int ac, char *av[])
 
 	str = check_arg(ac, av, &j);
 	j = 0;
-	dtr = malloc(sizeof (char **) * (size_to_malloc(ac, av) + 1));
+	dtr = malloc(sizeof (int) * (size_to_malloc(ac, av) + 10));
 	i = 0;
 
 	if (check_if_no_digit(str) == false
