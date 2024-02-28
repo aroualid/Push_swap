@@ -6,7 +6,7 @@
 /*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 13:20:32 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/27 16:32:42 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/28 16:13:15 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ int	size_to_malloc(int ac, char *av[])
 	return (total);
 }
 
-char	**check_arg(int ac, char *av[], int *len) 
+char	**check_arg(int ac, char *av[], int *len)
 {
 	int		i;
 	int		j;

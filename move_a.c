@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 11:34:20 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/28 13:17:09 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/28 16:11:13 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,19 +38,35 @@ void	ft_pa(t_stack *a, t_stack *b)
 void	ft_ra(t_stack *a)
 {
 	int	temp;
+	int	i;
+	int	j;
 
-	temp = a->data[0];
-	ft_memmove(a->data, a->data + 1, a->size - 1);
-	a->data[a->size - 1] = temp;
+	i = 0;
+	j = a->size - 1;
+	while (i < j)
+	{
+		temp = a->data[i];
+		a->data[i] = a->data[j];
+		a->data[j] = temp;
+		j--;
+	}
 	write(1, "ra\n", 3);
 }
 
 void	ft_rra(t_stack *a)
 {
 	int	temp;
+	int	i;
+	int	j;
 
-	temp = a->data[a->size - 1];
-	ft_memmove(a->data + 1, a->data, a->size - 1);
-	a->data[0] = temp;
+	i = 0;
+	j = a->size - 1;
+	while (i < a->size -1)
+	{
+		temp = a->data[j];
+		a->data[j] = a->data[i];
+		a->data[i] = temp;
+		i++;
+	}
 	write(1, "rra\n", 4);
 }

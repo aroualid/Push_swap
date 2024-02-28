@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 13:32:33 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/28 13:41:18 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/28 16:09:30 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	three_arg(t_stack *a)
 {
-	int top;
+	int	top;
 	int	mid;
 	int	bot;
 
 	top = a->data[0];
 	mid = a->data[1];
-	bot	= a->data[2];
+	bot = a->data[2];
 	if (top > mid && mid < bot && bot > top)
 		ft_sa(a);
 	if (top > mid && mid > bot && bot < top)
@@ -37,6 +37,4 @@ void	three_arg(t_stack *a)
 	}
 	if (top < mid && mid > bot && bot < top)
 		ft_rra(a);
-		
 }
-	

@@ -6,7 +6,7 @@
 /*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 13:24:48 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/27 14:52:35 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/28 16:10:50 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,34 +54,29 @@ int	ft_skip_zero(char *str)
 	return (i);
 }
 
-
-int    check_over_under_int(int ac, char **av)
+int	check_over_under_int(int ac, char **av)
 {
-    int        i;
-    int        j;
-    char    *str;
-    char    *arg;
+	int		i;
+	int		j;
+	char	*str;
+	char	*arg;
 
-    i = 0;
-    j = 0;
-    while (i < ac)
-    {
-        str = ft_itoa(ft_atoi(av[i]));
-        arg = av[i];
-        if (*arg == '-' && str[j++] == '-')
-            arg++;
-        while (*arg && *arg == '0' && ft_strlen(arg) > 1)
-            arg++;
-        j += ft_skip_zero(str);
-        if (ft_strcmp(arg, str + j) != 0)
-            return (free(str), false);
-        free(str);
-        j = 0;
-        i++;
-    }
-    return (true);
+	i = 0;
+	j = 0;
+	while (i < ac)
+	{
+		str = ft_itoa(ft_atoi(av[i]));
+		arg = av[i];
+		if (*arg == '-' && str[j++] == '-')
+			arg++;
+		while (*arg && *arg == '0' && ft_strlen(arg) > 1)
+			arg++;
+		j += ft_skip_zero(str);
+		if (ft_strcmp(arg, str + j) != 0)
+			return (free(str), false);
+		free(str);
+		j = 0;
+		i++;
+	}
+	return (true);
 }
-
-
-
-

@@ -6,7 +6,7 @@
 /*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 15:32:13 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/27 16:44:43 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/28 16:13:01 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	check_empty_arguments(int ac, char **str)
 	i = 0;
 	while (i < ac)
 	{
-		if (ft_strcmp(str[i], "") == 0 || (ft_strcmp(str[i], " ") == 0)) 
+		if (ft_strcmp(str[i], "") == 0 || (ft_strcmp(str[i], " ") == 0))
 			return (false);
 		i++;
 	}
@@ -52,5 +52,3 @@ int	ft_isspace(int c)
 		return (1);
 	return (0);
 }
-
-
