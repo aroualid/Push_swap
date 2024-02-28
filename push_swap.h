@@ -6,7 +6,7 @@
 /*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 15:32:40 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/28 12:06:15 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/28 13:41:46 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,6 @@ int		ft_skip_zero(char *str);
 int		ft_isspace(int c);
 char	**ft_strtok(char *str, const char *delim);
 void	two_arg(t_stack *a);
-
+void	three_arg(t_stack *a);
 
 #endif

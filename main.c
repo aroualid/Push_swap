@@ -6,7 +6,7 @@
 /*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 13:32:12 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/28 13:18:16 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/28 13:42:35 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ int	main(int ac, char **av)
 			return (false);
 		if (j == 2)
 			two_arg(stack_a);
+		if (j == 3)
+			three_arg(stack_a);
 		/*else
 		{
 			while (i < j)
