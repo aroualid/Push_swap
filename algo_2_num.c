@@ -6,14 +6,22 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 11:49:08 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/28 16:08:51 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/29 16:23:35 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+
 void	two_arg(t_stack *a)
 {
-	if (a->data[0] > a->data[1])
+	if(a->data[0] > a->data[1])
 		ft_sa(a);
+}
+
+void	two_arg_in_b(t_stack *a, t_stack *b)
+{
+	ft_pb(a, b);
+	ft_pb(a, b);
+	ft_sb(b);
 }

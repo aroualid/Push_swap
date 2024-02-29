@@ -6,7 +6,7 @@
 /*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 13:32:12 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/28 15:16:02 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/29 16:27:23 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,17 @@
 int	main(int ac, char **av)
 {
 	char	**str = NULL;
-	t_stack	*stack_a = malloc(sizeof (t_stack));
-	//int		*stack_b = NULL;
+	t_stack	*stack_a = ft_calloc(sizeof (t_stack), 1);
+	t_stack	*stack_b = ft_calloc(sizeof (t_stack), 1);
 	int		j = 0;
 	int		i = 0;
 
 	
 	str = check_arg(ac, av, &j);
 	stack_a->size = j;
+	stack_b->size = 0;
 	stack_a->data = check_good_arg(ac, av);
+	stack_b->data = ft_calloc(sizeof (int), j);
     if (stack_a->data == NULL)
         return (1);
     else
