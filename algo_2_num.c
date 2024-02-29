@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 11:49:08 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/29 16:23:35 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/29 16:36:29 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,6 @@ void	two_arg_in_b(t_stack *a, t_stack *b)
 	ft_pb(a, b);
 	ft_pb(a, b);
 	ft_sb(b);
+	ft_pa(b, a);
+	ft_pa(b, a);
 }

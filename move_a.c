@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 11:34:20 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/29 15:39:21 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/02/29 16:37:14 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ void	ft_pb(t_stack *a, t_stack *b)
 		i--;
 	}
 	b->data[0] = temp;
+	write (1, "pb\n", 3);
 }
 
 void	ft_ra(t_stack *a)
