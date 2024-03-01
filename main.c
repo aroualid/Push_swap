@@ -6,7 +6,7 @@
 /*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 13:32:12 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/01 14:17:43 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/01 17:39:43 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	main(int ac, char **av)
 	t_stack	*stack_a = ft_calloc(sizeof (t_stack), 1);
 	t_stack	*stack_b = ft_calloc(sizeof (t_stack), 1);
 	int		j = 0;
-	int		i = 0;
+	int		k = 0;
 
 	
 	str = check_arg(ac, av, &j);
@@ -26,29 +26,32 @@ int	main(int ac, char **av)
 	stack_b->size = 0;
 	stack_a->data = check_good_arg(ac, av);
 	stack_b->data = ft_calloc(sizeof (int), j);
-    if (stack_a->data == NULL)
-        return (1);
-    else
-    {
-		if (pars(stack_a->data, ac, av) == false)
-			return (false);
-		while (i < j)
-		{
-			printf("%d\n", stack_a->data[i]);
-			i++;
-		}
-		printf("le plus petit nombre est %d\n", stack_a->data[minus(stack_a)]);
-		printf("le plus grand nombre est %d\n", stack_a->data[maxus(stack_a)]);
-		i = 0;
-		if (j == 2)
-			two_arg(stack_a);
-		
-		if (j == 3)
-			three_arg(stack_a);
-		while (i < j)
-		{
-			printf("%d\n", stack_a->data[i]);
-			i++;
-		}
+    
+	push_two(stack_a, stack_b);
+	for (int i = 0; i < stack_a->size; i++)
+	{
+		printf("[%d]",right_pos(stack_b, stack_a->data[i]));
 	}
+	printf("\n#####################\n");
+	for (int i = 0; i < stack_a->size; i++)
+	{
+		printf("[%d]",min_move(stack_a, stack_b, stack_a->data[i]));
+	}
+	
+	printf("\nstack_a\n");
+	while (k < stack_a->size)
+	{
+		printf("[%d]", stack_a->data[k]);
+		k++;
+	}
+	k = 0;
+	printf("\n##############\n");
+	printf ("stack_b\n");
+	while (k < stack_b->size)
+	{
+		printf("[%d]", stack_b->data[k]);
+		k++;
+	}
+	printf("\n##############\n");
+
 }

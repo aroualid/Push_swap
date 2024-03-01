@@ -6,7 +6,7 @@
 /*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 15:32:40 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/01 14:17:19 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/01 17:34:09 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,4 +62,11 @@ void	two_arg_in_b(t_stack *a, t_stack *b);
 void	push_two(t_stack *a, t_stack *b);
 int		minus(t_stack *stack);
 int		maxus(t_stack *stack);
+int		right_pos(t_stack *b, int nb);
+int		find_pos(t_stack *a, int nb);
+int		count_ra_rb(t_stack *a, t_stack *b, int nb);
+int		count_rra_rrb(t_stack *a, t_stack *b, int nb);
+int		count_rra_rb(t_stack *a, t_stack *b, int nb);
+int		count_ra_rrb(t_stack *a, t_stack *b, int nb);
+int		min_move(t_stack *a, t_stack *b, int nb);
 #endif

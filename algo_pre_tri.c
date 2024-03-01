@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 13:26:20 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/01 14:16:57 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/01 16:58:09 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	push_two(t_stack *a, t_stack *b)
 {
-	ft_pb(b, a);
-	ft_pb(b, a);
+	ft_pb(a, b);
+	ft_pb(a, b);
 }
 
 int	minus(t_stack *stack)
 {
 	int	i;
-	int index;
+	int	index;
 
 	i = 1;
 	index = 0;
@@ -41,7 +41,7 @@ int	minus(t_stack *stack)
 int	maxus(t_stack *stack)
 {
 	int	i;
-	int index;
+	int	index;
 
 	i = 1;
 	index = 0;
@@ -58,4 +58,26 @@ int	maxus(t_stack *stack)
 	return (index);
 }
 
+int	right_pos (t_stack *b, int nb)
+{
+	int	i;
+	
+	i = 1;
+	if (nb > b->data[maxus(b)] || nb < b->data[minus(b)])
+		return (maxus(b));
+	if (nb > b->data[0] && nb < b->data[b->size - 1])
+		return (0);
+	while ((nb > b->data[i] || nb < b->data[i + 1]) && i < b->size)
+		i++;
+	return (i);
+}
 
+int	find_pos(t_stack *a, int nb)
+{
+	int	i;
+
+	i = 0;
+	while (a->data[i] != nb)
+		i++;
+	return (i);
+}
