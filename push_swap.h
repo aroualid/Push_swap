@@ -6,7 +6,7 @@
 /*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 15:32:40 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/29 15:23:03 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/01 14:17:19 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,10 @@ int		is_quote(char *str);
 int		count_arg_in_quote(char *av);
 int		nb_of_quote(char *av);
 int		size_to_malloc(int ac, char *av[]);
-char	**check_arg(int	ac, char *av[], int *len);
+char	**check_arg(int ac, char *av[], int *len);
 int		check_if_no_digit(char **str);
 int		*check_good_arg(int ac, char *av[]);
-int		len_of_num(long	num);
+int		len_of_num(long num);
 int		check_overflow(long int num);
 int		check_sort(int *num, int ac, char **str);
 int		check_duplicate(int *num, int ac, char *av[]);
@@ -59,4 +59,7 @@ char	**ft_strtok(char *str, const char *delim);
 void	two_arg(t_stack *a);
 void	three_arg(t_stack *a);
 void	two_arg_in_b(t_stack *a, t_stack *b);
+void	push_two(t_stack *a, t_stack *b);
+int		minus(t_stack *stack);
+int		maxus(t_stack *stack);
 #endif

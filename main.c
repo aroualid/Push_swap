@@ -6,7 +6,7 @@
 /*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 13:32:12 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/29 16:44:34 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/01 14:17:43 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,12 @@ int	main(int ac, char **av)
 			printf("%d\n", stack_a->data[i]);
 			i++;
 		}
+		printf("le plus petit nombre est %d\n", stack_a->data[minus(stack_a)]);
+		printf("le plus grand nombre est %d\n", stack_a->data[maxus(stack_a)]);
 		i = 0;
 		if (j == 2)
 			two_arg(stack_a);
+		
 		if (j == 3)
 			three_arg(stack_a);
 		while (i < j)
