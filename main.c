@@ -6,7 +6,7 @@
 /*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 13:32:12 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/01 17:39:43 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/01 20:37:23 by ari              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,19 @@ int	main(int ac, char **av)
 
 	
 	str = check_arg(ac, av, &j);
+	str = str;
 	stack_a->size = j;
 	stack_b->size = 0;
 	stack_a->data = check_good_arg(ac, av);
 	stack_b->data = ft_calloc(sizeof (int), j);
     
 	push_two(stack_a, stack_b);
+	printf ("position : \n");
 	for (int i = 0; i < stack_a->size; i++)
 	{
 		printf("[%d]",right_pos(stack_b, stack_a->data[i]));
 	}
-	printf("\n#####################\n");
+	printf ("\nnombre de move : \n");
 	for (int i = 0; i < stack_a->size; i++)
 	{
 		printf("[%d]",min_move(stack_a, stack_b, stack_a->data[i]));
