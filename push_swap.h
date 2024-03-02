@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 15:32:40 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/01 17:34:09 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/02 10:12:19 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,4 +69,11 @@ int		count_rra_rrb(t_stack *a, t_stack *b, int nb);
 int		count_rra_rb(t_stack *a, t_stack *b, int nb);
 int		count_ra_rrb(t_stack *a, t_stack *b, int nb);
 int		min_move(t_stack *a, t_stack *b, int nb);
+void	ret_to_move(t_stack *a, t_stack *b, int nb);
+int		count_ra(int pos);
+int		count_rra(int pos, int size);
+int		count_rb(int pos);
+int		count_rrb(int pos, int size);
+int		compare_ra_rb(t_stack *a, t_stack *b, int nb, int *c_ra, int *c_rb);
+int		compare_rra_rrb(t_stack *a, t_stack *b, int nb, int *c_ra, int *c_rb);
 #endif
