@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 15:32:40 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/03 18:02:08 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/03 18:09:48 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ typedef struct nb_move
 {
 	int	c_ra;
 	int	c_rb;
+	int	c_rra;
+	int	c_rrb;
 }	nb_move;
 
 

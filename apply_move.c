@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 13:36:27 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/03 18:03:02 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/03 18:13:56 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ void	apply_ra_rb(t_stack *a, t_stack *b, int nb, nb_move *c)
 	int	nrb;
 	int res;
 	
-	nra = count_ra(find_pos(a, nb));
-	nrb = count_rb(right_pos(b, nb));
+	nra = c->c_ra;
+	nrb = c->c_rb;
 	res = compare_ra_rb(a, b, nb, c);
 	if (res + nra + nrb == min_move(a, b, nb))
 	{
@@ -64,8 +64,8 @@ void	apply_rra_rrb(t_stack *a, t_stack *b, int nb, nb_move *c)
 	int	nrb;
 	int res;
 	
-	nra = count_rra(find_pos(a, nb), a->size);
-	nrb = count_rrb(right_pos(b, nb), b->size);
+	nra = c->c_rra;
+	nrb = c->c_rrb;
 	res = compare_rra_rrb(a, b, nb, c);
 	if (res + nra + nrb == min_move(a, b, nb))
 	{

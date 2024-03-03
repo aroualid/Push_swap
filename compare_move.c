@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 09:18:36 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/03 18:01:24 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/03 18:11:05 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,20 +46,20 @@ int	compare_rra_rrb(t_stack *a, t_stack *b, int nb, nb_move *c)
 
 	pos = find_pos(a, nb);
 	to_reach = right_pos(b, nb);
-	c->c_ra = count_rra(pos, a->size);
-	c->c_rb = count_rrb(to_reach, b->size);
+	c->c_rra = count_rra(pos, a->size);
+	c->c_rrb = count_rrb(to_reach, b->size);
 	i = 0;
-	if (c->c_ra == c->c_rb)
-		i = c->c_ra;
-	if (c->c_ra > c->c_rb)
+	if (c->c_rra == c->c_rrb)
+		i = c->c_rra;
+	if (c->c_rra > c->c_rrb)
 	{
-		i = c->c_rb;
-		c->c_ra -= c->c_rb;
+		i = c->c_rrb;
+		c->c_rra -= c->c_rrb;
 	}
-	if (c->c_rb > c->c_ra)
+	if (c->c_rrb > c->c_rra)
 	{
-		i = c->c_ra;
-		c->c_rb -= c->c_ra;
+		i = c->c_rra;
+		c->c_rrb -= c->c_rra;
 	}
 	return (i);
 }
