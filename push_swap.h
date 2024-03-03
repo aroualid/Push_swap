@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 15:32:40 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/03 18:09:48 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/03 22:10:41 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,10 @@ typedef struct nb_move
 {
 	int	c_ra;
 	int	c_rb;
+	int c_rr;
 	int	c_rra;
 	int	c_rrb;
+	int	c_rrr;
 }	nb_move;
 
 
@@ -83,9 +85,13 @@ int		count_ra(int pos);
 int		count_rra(int pos, int size);
 int		count_rb(int pos);
 int		count_rrb(int pos, int size);
-int		compare_ra_rb(t_stack *a, t_stack *b, int nb, nb_move *c);
-int		compare_rra_rrb(t_stack *a, t_stack *b, int nb, nb_move *c);
+void	compare_ra_rb(t_stack *a, t_stack *b, int nb, nb_move *c);
+void	compare_rra_rrb(t_stack *a, t_stack *b, int nb, nb_move *c);
+void	compare_ra_rrb(t_stack *a, t_stack *b, int nb, nb_move *c);
+void	compare_rra_rb(t_stack *a, t_stack *b, int nb, nb_move *c);
 void	apply_action(t_stack *a, t_stack *b, int nb, nb_move *c);
 void	apply_ra_rb(t_stack *a, t_stack *b, int nb, nb_move *c);
 void	apply_rra_rrb(t_stack *a, t_stack *b, int nb, nb_move *c);
+void	apply_rra_rb(t_stack *a, t_stack *b,  int nb, nb_move *c);
+void	apply_ra_rrb(t_stack *a, t_stack *b,  int nb, nb_move *c);
 #endif

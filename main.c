@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 13:32:12 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/03 17:58:39 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/03 22:24:11 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,9 @@ int	main(int ac, char **av)
 	printf ("\nnombre de move : \n");
 	for (int i = 0; i < stack_a->size; i++)
 	{
+		min_move(stack_a, stack_b, stack_a->data[i]);
 		apply_action(stack_a, stack_b, stack_a->data[i], c);
-		printf("[%d]",min_move(stack_a, stack_b, stack_a->data[i]));
+		// printf("[%d]",min_move(stack_a, stack_b, stack_a->data[i]));
 	}
 	
 	printf("\nstack_a\n");
