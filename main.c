@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 13:32:12 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/02 09:10:48 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/03 17:58:39 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ int	main(int ac, char **av)
 	char	**str = NULL;
 	t_stack	*stack_a = ft_calloc(sizeof (t_stack), 1);
 	t_stack	*stack_b = ft_calloc(sizeof (t_stack), 1);
+	nb_move *c = malloc (sizeof (int) * 2);
 	int		j = 0;
 	int		k = 0;
 
 	
 	str = check_arg(ac, av, &j);
-	str = str;
 	stack_a->size = j;
 	stack_b->size = 0;
 	stack_a->data = check_good_arg(ac, av);
@@ -37,6 +37,7 @@ int	main(int ac, char **av)
 	printf ("\nnombre de move : \n");
 	for (int i = 0; i < stack_a->size; i++)
 	{
+		apply_action(stack_a, stack_b, stack_a->data[i], c);
 		printf("[%d]",min_move(stack_a, stack_b, stack_a->data[i]));
 	}
 	
