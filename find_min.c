@@ -1,40 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   algo_3_num.c                                       :+:      :+:    :+:   */
+/*   find_min.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/28 13:32:33 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/04 13:17:21 by aroualid         ###   ########.fr       */
+/*   Created: 2024/03/04 13:35:56 by aroualid          #+#    #+#             */
+/*   Updated: 2024/03/04 15:55:39 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	three_arg(t_stack *a)
+int	find_min(t_stack *a, t_stack *b)
 {
-	int	top;
-	int	mid;
-	int	bot;
+	int i;
+	int	cost;
+	int	min;
 
-	top = a->data[0];
-	mid = a->data[1];
-	bot = a->data[2];
-	if (top > mid && mid < bot && bot > top)
-		ft_sa(a);
-	if (top > mid && mid > bot && bot < top)
-	{
-		ft_sa(a);
-		ft_rra(a, 1);
-	}
-	if (top > mid && mid < bot && bot < top)
-		ft_ra(a, 1);
-	if (top < mid && mid > bot && bot > top)
-	{
-		ft_sa(a);
-		ft_ra(a, 1);
-	}
-	if (top < mid && mid > bot && bot < top)
-		ft_rra(a, 1);
+	i = 0;
+	cost = 
+	while (i < a->size)
 }

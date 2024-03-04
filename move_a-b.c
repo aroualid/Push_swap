@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 09:41:32 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/26 18:05:12 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/04 13:16:56 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,14 @@ void	ft_ss(t_stack *a, t_stack *b)
 
 void	ft_rr(t_stack *a, t_stack *b)
 {
-	ft_ra(a);
-	ft_rb(b);
+	ft_ra(a, 0);
+	ft_rb(b, 0);
 	write(1, "rr\n", 3);
 }
 
 void	ft_rrr(t_stack *a, t_stack *b)
 {
-	ft_rra(a);
-	ft_rrb(b);
+	ft_rra(a, 0);
+	ft_rrb(b, 0);
 	write(1, "rrr\n", 4);
 }

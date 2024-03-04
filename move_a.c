@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 11:34:20 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/29 16:37:14 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/04 13:15:10 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	ft_pb(t_stack *a, t_stack *b)
 	write (1, "pb\n", 3);
 }
 
-void	ft_ra(t_stack *a)
+void	ft_ra(t_stack *a, bool print)
 {
 	int	temp;
 	int	i;
@@ -59,10 +59,11 @@ void	ft_ra(t_stack *a)
 		a->data[j] = temp;
 		j--;
 	}
-	write(1, "ra\n", 3);
+	if (print)
+		write(1, "ra\n", 3);
 }
 
-void	ft_rra(t_stack *a)
+void	ft_rra(t_stack *a, bool print)
 {
 	int	temp;
 	int	i;
@@ -77,5 +78,6 @@ void	ft_rra(t_stack *a)
 		a->data[i] = temp;
 		i++;
 	}
-	write(1, "rra\n", 4);
+	if (print)
+		write(1, "rra\n", 4);
 }
