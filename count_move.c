@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 15:33:01 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/04 13:39:57 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/04 16:14:22 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,12 +81,13 @@ int min_move(t_stack *a, t_stack *b, int nb)
 
 	i = 0;
 	min = 0;
-	ra_rb = count_ra_rb(a, b, nb);
-	rra_rrb = count_rra_rrb(a, b, nb);
-	rra_rb = count_rra_rb(a, b, nb);
-	ra_rrb = count_ra_rrb(a, b, nb);
+
 	while (i < a->size)
 	{
+		ra_rb = count_ra_rb(a, b, nb);
+		rra_rrb = count_rra_rrb(a, b, nb);
+		rra_rb = count_rra_rb(a, b, nb);
+		ra_rrb = count_ra_rrb(a, b, nb);
 		if (ra_rb <= rra_rrb && ra_rb <= rra_rb && ra_rb <= ra_rrb)
 			min = ra_rb;
 		if (rra_rrb <= ra_rb && rra_rrb <= rra_rb && rra_rrb <= ra_rrb)
