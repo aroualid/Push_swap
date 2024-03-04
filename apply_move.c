@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 13:36:27 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/03 22:48:57 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/04 11:07:45 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,17 +30,17 @@ void	apply_action(t_stack *a, t_stack *b, int nb, nb_move *c)
 		apply_ra_rb(a, b, nb, c);
 		return ;
 	}
-	if (min == rra_rrb)
+	else if (min == rra_rrb)
 	{
 		apply_rra_rrb(a, b,  nb, c);
 		return ;
 	}
-	if (min == rra_rb)
+	else if (min == rra_rb)
 	{	
 		apply_rra_rb(a, b,  nb, c);
 		return ;
 	}
-	if (min == ra_rrb)
+	else if (min == ra_rrb)
 	{
 		apply_ra_rrb(a, b,  nb, c);
 		return ;
@@ -73,7 +73,10 @@ void	apply_ra_rb(t_stack *a, t_stack *b, int nb, nb_move *c)
 		nrb--;
 	}
 	if (res == 0 && nra == 0 && nrb == 0)
+	{
+		printf("pb de %d\n", nb);
 		ft_pb(a, b);
+	}
 }
 
 void	apply_rra_rrb(t_stack *a, t_stack *b, int nb, nb_move *c)
@@ -102,7 +105,11 @@ void	apply_rra_rrb(t_stack *a, t_stack *b, int nb, nb_move *c)
 		nrb--;
 	}
 	if (res == 0 && nra == 0 && nrb == 0)
+	{
+		printf("pb de %d\n", nb);
 		ft_pb(a, b);
+	}
+
 }
 
 void	apply_ra_rrb(t_stack *a, t_stack *b, int nb, nb_move *c)
@@ -124,7 +131,11 @@ void	apply_ra_rrb(t_stack *a, t_stack *b, int nb, nb_move *c)
 		nrb--;
 	}
 	if (nra == 0 && nrb == 0)
+	{
+		printf("pb de %d\n", nb);
 		ft_pb(a, b);
+	}
+	
 }
 
 void	apply_rra_rb(t_stack *a, t_stack *b, int nb, nb_move *c)
@@ -146,5 +157,8 @@ void	apply_rra_rb(t_stack *a, t_stack *b, int nb, nb_move *c)
 		nrb--;
 	}
 	if (nra == 0 && nrb == 0)
+	{
+		printf("pb de %d\n", nb);
 		ft_pb(a, b);
+	}
 }
