@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 13:36:27 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/04 16:22:43 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/05 16:18:42 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ void	apply_ra_rrb(t_stack *a, t_stack *b, int nb, nb_move *c)
 {
 	int	nra;
 	int	nrb;
-	
+
 	compare_ra_rrb(a, b, nb, c);
 	nra = c->c_ra;
 	nrb = c->c_rrb;

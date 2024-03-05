@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 09:18:36 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/04 16:57:17 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/05 15:26:12 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,10 @@ void	apply_sort(t_stack *a, t_stack *b, nb_move *c)
 
 	j = 0;
 	i = a->size;
-	while (i > 3 && j < i)
+	while (i >= 3)
 	{
 		move = min_move(a, b, a->data[j]);
+		printf("min = %i\n", move);
 		if (move == count_ra_rb(a, b, a->data[j]))
 		{
 			apply_ra_rb(a, b, a->data[j], c);
@@ -43,6 +44,8 @@ void	apply_sort(t_stack *a, t_stack *b, nb_move *c)
 			apply_rra_rb(a, b, a->data[j], c);
 			i--;
 		}
+	printf("size = %i\n", i);
+	printf("j = %i\n", j);
 	j++;
 	}
 } 
@@ -89,7 +92,7 @@ void	compare_rra_rrb(t_stack *a, t_stack *b, int nb, nb_move *c)
 	}
 	else if (c->c_rrb > c->c_rra)
 	{
-		c->c_rrr = c->c_rra;
+	c->c_rrr = c->c_rra;
 		c->c_rrb -= c->c_rra;
 	}
 }
