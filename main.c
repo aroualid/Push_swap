@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 13:32:12 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/08 17:46:56 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/08 18:18:58 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int main(int ac, char **av)
 	char **str = NULL;
 	t_stack *a = ft_calloc(sizeof(t_stack), 1);
 	t_stack *b = ft_calloc(sizeof(t_stack), 1);
-	int k = 0;
+	//int k = 0;
 	int j = 0;
 	int	i;
 	
@@ -27,19 +27,19 @@ int main(int ac, char **av)
 	a->data = check_good_arg(ac, av);
 	b->data = ft_calloc(sizeof(int), j);
 	i = a->size;
-	printf ("#####stack a before sort######\n");
+	/*printf ("#####stack a before sort######\n");
 	while (k < i)
 	{
 		printf("[%d] ", a->data[k]);
 		k++;
 	}
-	printf("\n");
+	printf("\n");*/
 	push_two(a, b);
 	apply_sort(a, b);
-	printf("\n\n\n#####stack a after sort#####\n");
+/*	printf("\n\n\n#####stack a after sort#####\n");
 	for (int i = 0; i < a->size; i++)
 		printf("[%d] ", a->data[i]);
 	printf("\n#####stack b after sort#####\n");
 	for (int i = 0; i < b->size; i++)
-		printf("[%d] ", b->data[i]);
+		printf("[%d] ", b->data[i]);*/
 }
