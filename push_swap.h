@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 15:32:40 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/04 16:26:30 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/08 17:36:56 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,26 +73,16 @@ void	two_arg_in_b(t_stack *a, t_stack *b);
 void	push_two(t_stack *a, t_stack *b);
 int		minus(t_stack *stack);
 int		maxus(t_stack *stack);
+int		num_pos(t_stack *a, int nb);
 int		right_pos(t_stack *b, int nb);
-int		find_pos(t_stack *a, int nb);
-int		count_ra_rb(t_stack *a, t_stack *b, int nb);
-int		count_rra_rrb(t_stack *a, t_stack *b, int nb);
-int		count_rra_rb(t_stack *a, t_stack *b, int nb);
-int		count_ra_rrb(t_stack *a, t_stack *b, int nb);
-int		min_move(t_stack *a, t_stack *b, int nb);
-void	ret_to_move(t_stack *a, t_stack *b, int nb);
-int		count_ra(int pos);
-int		count_rra(int pos, int size);
-int		count_rb(int pos);
-int		count_rrb(int pos, int size);
-void	compare_ra_rb(t_stack *a, t_stack *b, int nb, nb_move *c);
-void	compare_rra_rrb(t_stack *a, t_stack *b, int nb, nb_move *c);
-void	compare_ra_rrb(t_stack *a, t_stack *b, int nb, nb_move *c);
-void	compare_rra_rb(t_stack *a, t_stack *b, int nb, nb_move *c);
-void	apply_action(t_stack *a, t_stack *b, int nb, nb_move *c);
-void	apply_ra_rb(t_stack *a, t_stack *b, int nb, nb_move *c);
-void	apply_rra_rrb(t_stack *a, t_stack *b, int nb, nb_move *c);
-void	apply_rra_rb(t_stack *a, t_stack *b,  int nb, nb_move *c);
-void	apply_ra_rrb(t_stack *a, t_stack *b,  int nb, nb_move *c);
-void	apply_sort(t_stack *a, t_stack *b, nb_move *c);
+int		comb_ra_rb(t_stack *a, t_stack *b, int nb);
+int		comb_rra_rrb(t_stack *a, t_stack *b, int nb);
+int		comb_rra_rb(t_stack *a, t_stack *b, int nb);
+int		comb_ra_rrb(t_stack *a, t_stack *b, int nb);
+int		count_min_move(t_stack *a, t_stack *b);
+int		apply_ra_rb(t_stack *a, t_stack*b, int nb);
+int		apply_rra_rrb(t_stack *a, t_stack*b, int nb);
+int		apply_rra_rb(t_stack *a, t_stack*b, int nb);
+int		apply_ra_rrb(t_stack *a, t_stack*b, int nb);
+void	apply_sort(t_stack *a, t_stack*b);
 #endif
