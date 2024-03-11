@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 13:04:42 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/10 02:39:05 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/11 15:30:57 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ int	count_min_move_b(t_stack *a, t_stack *b)
 			cost = move;
 		move = comb_ra_rrb_b(a, b, a->data[i]);
 		if (cost > move)
-			cost = move;
+			cost = move;		
 	i++;
 	}
 	return (cost);	

@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 01:57:59 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/10 03:02:33 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/11 13:51:41 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	put_first_on_top(t_stack *a)
 		while(a->data[0] != num)
 			ft_rra(a, 1);
 	}
-	if (minus(a) < i)
+	else
 	{
 		while(a->data[0] != num)
 			ft_ra(a, 1);

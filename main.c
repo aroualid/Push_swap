@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 13:32:12 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/10 03:20:15 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/11 13:45:37 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,14 @@ int main(int ac, char **av)
 	b->size = 0;
 	a->data = check_good_arg(ac, av);
 	b->data = ft_calloc(sizeof(int), j);
-	str = str;
 	i = a->size;
+	if (a->data == NULL)
+        return (1);
+	else
+    {
+        if (pars(a->data, ac, av) == false)
+            return (false);
+	}
 	printf ("#####stack a before sort######\n");
 	while (k < i)
 	{
@@ -35,8 +41,15 @@ int main(int ac, char **av)
 		k++;
 	}
 	printf("\n");
-	push_two(a, b);
-	apply_sort(a,b);
+	if (j == 2)
+		two_arg(a);
+	else if (j == 3)
+		three_arg(a);
+	else 
+	{	
+		push_two(a, b);
+		apply_sort(a,b);
+	}
 	printf("\n\n\n#####stack a after sort#####\n");
 	for (int i = 0; i < a->size; i++)
 		printf("[%d] ", a->data[i]);

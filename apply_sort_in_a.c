@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 01:57:01 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/10 02:56:14 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/11 13:15:02 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	apply_ra_rb_in_a(t_stack *a, t_stack*b, int nb)
 	while (nb != b->data[0])
 		ft_rb(b, 1);
 	while (right_pos_in_a(a,nb) != 0)
-		ft_ra(b, 1);
+		ft_ra(a, 1);
 	ft_pa(b, a);
 	return (-1);
 }
@@ -49,11 +49,9 @@ int	apply_rrb_ra_in_a(t_stack *a, t_stack*b, int nb)
 int	apply_rb_rra_in_a(t_stack *a, t_stack*b, int nb)
 {
 	while (nb != b->data[0])
-	{
 		ft_rb(b, 1);
-	}
 	while (right_pos_in_a(a,nb) != 0)
-		ft_rra(b, 1);
+		ft_rra(a, 1);
 	ft_pa(b, a);
 	return (-1);
 }

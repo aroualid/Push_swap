@@ -6,7 +6,7 @@
 /*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 15:32:13 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/10 02:16:52 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/11 15:35:24 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int	right_pos_in_a (t_stack *a, int nb)
 		return (0);
 	if (nb > a->data[maxus(a)] || nb < a->data[minus(a)])
 		return (minus(a));
-	while (nb < a->data[i] || nb > a->data[i + 1])
+	while ((nb < a->data[i] || nb > a->data[i + 1]) && i < a->size)
 		i++;
 	return (i);
 }

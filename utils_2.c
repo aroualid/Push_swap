@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 13:16:51 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/08 17:51:57 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/11 15:33:50 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ int	right_pos (t_stack *b, int nb)
 		return (0);
 	if (nb > b->data[maxus(b)] || nb < b->data[minus(b)])
 		return (maxus(b));
-	while (nb > b->data[i] || nb < b->data[i + 1])
+	while ((nb > b->data[i] || nb < b->data[i + 1]) && i < b->size)
 		i++;
 	return (i);
 }

@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 02:37:48 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/10 02:56:56 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/11 14:03:24 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ int	comb_rrb_ra_a(t_stack *a, t_stack *b, int nb)
 {
 	int	move;
 
-	move = num_pos(b, nb);
-	move += (a->size - right_pos_in_a(a, nb));
+	move = b->size - num_pos(b, nb);
+	move += right_pos_in_a(a, nb);
 	return (move);
 }
 
@@ -47,8 +47,8 @@ int	comb_rb_rra_a(t_stack *a, t_stack *b, int nb)
 {
 	int	move;
 
-	move = b->size - num_pos(b, nb);
-	move += right_pos_in_a(a, nb);
+	move = num_pos(b, nb);
+	move += (a->size - right_pos_in_a(a, nb));
 	return (move);
 }
 
