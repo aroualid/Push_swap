@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 13:32:12 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/12 01:23:51 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/12 14:29:48 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,10 @@ int	main(int ac, char **av)
 		three_arg(a);
 	else
 		apply_sort(a, b);
+	free(str);
+	free(a->data);
+	free(b->data);
+	free(a);
+	free(b);
+
 }

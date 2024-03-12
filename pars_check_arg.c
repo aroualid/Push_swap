@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 18:47:02 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/12 01:23:15 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/12 14:37:14 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ int	*check_good_arg(int ac, char *av[])
 			dtr[i] = ft_atoi(str[i]);
 			i++;
 		}
+		free(str);
 		return (dtr);
 	}
 }
@@ -79,7 +80,7 @@ int	check_sort(int *num, int ac, char **str)
 	j = 1;
 	count = 1;
 	total = size_to_malloc(ac, str);
-	while (num[j])
+	while (j < total)
 	{
 		if (num[i] < num[j])
 			count++;
