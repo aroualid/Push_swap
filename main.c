@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 13:32:12 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/12 01:19:22 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/12 01:23:51 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ int	main(int ac, char **av)
 	b = ft_calloc(sizeof(t_stack), 1);
 	j = 0;
 	str = check_arg(ac, av, &j);
-	str = str;
 	a->size = j;
 	b->size = 0;
 	a->data = check_good_arg(ac, av);
