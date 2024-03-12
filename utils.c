@@ -6,7 +6,7 @@
 /*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 15:32:13 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/11 18:49:17 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/12 01:10:33 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int	ft_isspace(int c)
 	return (0);
 }
 
-int	right_pos_in_a (t_stack *a, int nb)
+int	right_pos_in_a(t_stack *a, int nb)
 {
 	int	i;
 	int	j;
@@ -64,7 +64,7 @@ int	right_pos_in_a (t_stack *a, int nb)
 		return (0);
 	if (nb > a->data[maxus(a)] || nb < a->data[minus(a)])
 		return (minus(a));
-	while ((nb < a->data[j] || nb > a->data[j + 1]) && j < a->size)
+	while (nb < a->data[j] || nb > a->data[j + 1])
 	{
 		i++;
 		j++;

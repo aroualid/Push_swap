@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 11:34:20 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/11 14:36:53 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/12 00:54:29 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_pb(t_stack *a, t_stack *b)
 	temp = a->data[0];
 	while (i < a->size - 1)
 	{
-		a->data[i] = a->data[i+1];
+		a->data[i] = a->data[i + 1];
 		i++;
 	}
 	a->size--;

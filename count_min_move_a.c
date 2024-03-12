@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 02:37:48 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/11 14:03:24 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/12 00:33:40 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,16 +55,16 @@ int	comb_rb_rra_a(t_stack *a, t_stack *b, int nb)
 int	count_min_move_a(t_stack *a, t_stack *b)
 {
 	int	move;
-	int cost;
-	int i;
-	
+	int	cost;
+	int	i;
+
 	i = 0;
 	cost = comb_ra_rb_a(a, b, b->data[i]);
 	while (i < b->size)
 	{
 		move = comb_ra_rb_a(a, b, b->data[i]);
 		if (cost > move)
-			cost =  move;	;
+			cost = move;
 		move = comb_rra_rrb_a(a, b, b->data[i]);
 		if (cost > move)
 			cost = move;
@@ -74,7 +74,7 @@ int	count_min_move_a(t_stack *a, t_stack *b)
 		move = comb_rb_rra_a(a, b, b->data[i]);
 		if (cost > move)
 			cost = move;
-	i++;
+		i++;
 	}
-	return (cost);	
+	return (cost);
 }

@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 11:36:00 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/11 14:37:00 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/12 00:41:15 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_pa(t_stack *b, t_stack *a)
 	temp = b->data[0];
 	while (i < b->size - 1)
 	{
-		b->data[i] = b->data[i+1];
+		b->data[i] = b->data[i + 1];
 		i++;
 	}
 	b->size--;
@@ -42,7 +42,6 @@ void	ft_pa(t_stack *b, t_stack *a)
 	}
 	a->data[0] = temp;
 	write (1, "pa\n", 3);
-
 }
 
 void	ft_rb(t_stack *b, bool print)

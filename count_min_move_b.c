@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 13:04:42 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/11 18:06:53 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/12 00:38:26 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ int	comb_rra_rb_b(t_stack *a, t_stack *b, int nb)
 	return (move);
 }
 
-
 int	comb_ra_rrb_b(t_stack *a, t_stack *b, int nb)
 {
 	int	move;
@@ -56,16 +55,16 @@ int	comb_ra_rrb_b(t_stack *a, t_stack *b, int nb)
 int	count_min_move_b(t_stack *a, t_stack *b)
 {
 	int	move;
-	int cost;
-	int i;
-	
+	int	cost;
+	int	i;
+
 	i = 0;
 	cost = comb_ra_rb_b(a, b, a->data[i]);
 	while (i < a->size)
 	{
 		move = comb_ra_rb_b(a, b, a->data[i]);
 		if (cost > move)
-			cost =  move;
+			cost = move;
 		move = comb_rra_rrb_b(a, b, a->data[i]);
 		if (cost > move)
 			cost = move;
@@ -74,8 +73,8 @@ int	count_min_move_b(t_stack *a, t_stack *b)
 			cost = move;
 		move = comb_ra_rrb_b(a, b, a->data[i]);
 		if (cost > move)
-			cost = move;		
+			cost = move;
 		i++;
 	}
-	return (cost);	
+	return (cost);
 }

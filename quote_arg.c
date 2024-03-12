@@ -6,7 +6,7 @@
 /*   By: ari <ari@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 13:20:32 by aroualid          #+#    #+#             */
-/*   Updated: 2024/02/28 16:13:15 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/12 00:38:56 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,7 +112,7 @@ char	**check_arg(int ac, char *av[], int *len)
 			while (tmp[k] != NULL)
 				str[j++] = tmp[k++];
 			k = 0;
-		}	
+		}
 		else
 			str[j++] = av[i];
 		i++;

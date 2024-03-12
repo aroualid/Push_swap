@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 18:03:00 by aroualid          #+#    #+#             */
-/*   Updated: 2023/11/27 13:17:33 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/12 00:31:38 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int	ft_is_ptr(char c, char const *set)
 	{
 		if (c == set[i])
 			return (1);
-	i++;
+		i++;
 	}
 	return (0);
 }

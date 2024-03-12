@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:56:56 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/02 09:11:15 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/12 00:32:30 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,3 @@ long	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
-
-
-

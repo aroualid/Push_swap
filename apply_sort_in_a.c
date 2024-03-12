@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 01:57:01 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/11 13:15:02 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/12 00:53:01 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 int	apply_ra_rb_in_a(t_stack *a, t_stack*b, int nb)
 {
-	while (nb != b->data[0] && right_pos_in_a(a,nb) != 0)
+	while (nb != b->data[0] && right_pos_in_a(a, nb) != 0)
 		ft_rr(a, b);
 	while (nb != b->data[0])
 		ft_rb(b, 1);
-	while (right_pos_in_a(a,nb) != 0)
+	while (right_pos_in_a(a, nb) != 0)
 		ft_ra(a, 1);
 	ft_pa(b, a);
 	return (-1);
@@ -26,11 +26,11 @@ int	apply_ra_rb_in_a(t_stack *a, t_stack*b, int nb)
 
 int	apply_rra_rrb_in_a(t_stack *a, t_stack*b, int nb)
 {
-	while (nb != b->data[0] && right_pos_in_a(a,nb) != 0)
+	while (nb != b->data[0] && right_pos_in_a(a, nb) != 0)
 		ft_rrr(a, b);
 	while (nb != b->data[0])
 		ft_rrb(b, 1);
-	while (right_pos_in_a(a,nb) != 0)
+	while (right_pos_in_a(a, nb) != 0)
 		ft_rra(a, 1);
 	ft_pa(b, a);
 	return (-1);
@@ -40,7 +40,7 @@ int	apply_rrb_ra_in_a(t_stack *a, t_stack*b, int nb)
 {
 	while (nb != b->data[0])
 		ft_rrb(b, 1);
-	while (right_pos_in_a(a,nb) != 0)
+	while (right_pos_in_a(a, nb) != 0)
 		ft_ra(a, 1);
 	ft_pa(b, a);
 	return (-1);
@@ -50,7 +50,7 @@ int	apply_rb_rra_in_a(t_stack *a, t_stack*b, int nb)
 {
 	while (nb != b->data[0])
 		ft_rb(b, 1);
-	while (right_pos_in_a(a,nb) != 0)
+	while (right_pos_in_a(a, nb) != 0)
 		ft_rra(a, 1);
 	ft_pa(b, a);
 	return (-1);
@@ -59,7 +59,8 @@ int	apply_rb_rra_in_a(t_stack *a, t_stack*b, int nb)
 void	apply_sort_in_a(t_stack *a, t_stack *b)
 {
 	int	move;
-	int i;
+	int	i;
+
 	while (b->size > 0)
 	{
 		i = 0;
@@ -67,16 +68,15 @@ void	apply_sort_in_a(t_stack *a, t_stack *b)
 		while (i != -1)
 		{
 			if (move == comb_ra_rb_a(a, b, b->data[i]))
-				i = apply_ra_rb_in_a(a, b , b->data[i]);
+				i = apply_ra_rb_in_a(a, b, b->data[i]);
 			else if (move == comb_rra_rrb_a(a, b, b->data[i]))
-				i = apply_rra_rrb_in_a(a, b , b->data[i]);
+				i = apply_rra_rrb_in_a(a, b, b->data[i]);
 			else if (move == comb_rrb_ra_a(a, b, b->data[i]))
-				i = apply_rrb_ra_in_a(a, b , b->data[i]);
+				i = apply_rrb_ra_in_a(a, b, b->data[i]);
 			else if (move == comb_rb_rra_a(a, b, b->data[i]))
-				i = apply_rb_rra_in_a(a, b , b->data[i]);
+				i = apply_rb_rra_in_a(a, b, b->data[i]);
 			else
 				i++;
 		}
-
 	}
 }

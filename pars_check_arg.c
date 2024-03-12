@@ -6,11 +6,9 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 18:47:02 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/09 18:47:03 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/12 00:39:37 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #include "push_swap.h"
 
@@ -85,8 +83,8 @@ int	check_sort(int *num, int ac, char **str)
 	{
 		if (num[i] < num[j])
 			count++;
-	i++;
-	j++;
+		i++;
+		j++;
 	}
 	if (count == total)
 	{
@@ -112,10 +110,10 @@ int	check_duplicate(int *num, int ac, char *av[])
 			{
 				return (false);
 			}
-		i++;
+			i++;
 		}
-	j++;
-	i = j + 1;
+		j++;
+		i = j + 1;
 	}
 	return (true);
 }

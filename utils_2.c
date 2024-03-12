@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 13:16:51 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/11 18:40:37 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/12 01:10:43 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int	maxus(t_stack *stack)
 	return (index);
 }
 
-int num_pos(t_stack *a, int nb)
+int	num_pos(t_stack *a, int nb)
 {
 	int	i;
 
@@ -73,18 +73,18 @@ int num_pos(t_stack *a, int nb)
 	return (i);
 }
 
-int	right_pos (t_stack *b, int nb)
+int	right_pos(t_stack *b, int nb)
 {
 	int	i;
 	int	j;
-	
+
 	i = 1;
 	j = 0;
 	if (nb > b->data[0] && nb < b->data[b->size - 1])
 		return (0);
 	if (nb > b->data[maxus(b)] || nb < b->data[minus(b)])
 		return (maxus(b));
-	while ((nb > b->data[j] || nb < b->data[j + 1]) && j < b->size)
+	while (nb > b->data[j] || nb < b->data[j + 1])
 	{
 		i++;
 		j++;

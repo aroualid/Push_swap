@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 15:32:40 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/10 02:48:24 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/12 00:52:01 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,6 @@ typedef struct t_stack
 	int	*data;
 	int	size;
 }	t_stack;
-
-typedef struct nb_move
-{
-	int	c_ra;
-	int	c_rb;
-	int c_rr;
-	int	c_rra;
-	int	c_rrb;
-	int	c_rrr;
-}	nb_move;
-
 
 void	ft_swap(int *a, int *b);
 void	ft_sa(t_stack *a);
@@ -95,6 +84,7 @@ int		apply_rra_rb_in_b(t_stack *a, t_stack*b, int nb);
 int		apply_ra_rrb_in_b(t_stack *a, t_stack*b, int nb);
 void	apply_sort_in_b(t_stack *a, t_stack*b);
 void	apply_sort_in_a(t_stack *a, t_stack*b);
-int		right_pos_in_a (t_stack *a, int nb);
+int		right_pos_in_a(t_stack *a, int nb);
 void	apply_sort(t_stack *a, t_stack*b);
+
 #endif
