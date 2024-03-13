@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 18:47:02 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/13 16:33:27 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/13 17:10:12 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int	*check_good_arg(int ac, char *av[])
 		|| check_over_under_int(size_to_malloc(ac, av), str) == false)
 	{
 		write(2, "Error\n", 6);
-		return (false);
+		return (free_arg(str, dtr));
 	}
 	else
 	{

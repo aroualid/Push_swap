@@ -6,7 +6,7 @@
 #    By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/26 17:33:50 by aroualid          #+#    #+#              #
-#    Updated: 2024/03/13 16:30:20 by aroualid         ###   ########.fr        #
+#    Updated: 2024/03/13 16:54:57 by aroualid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CFLAGS=  -Wall -Wextra -Werror  -g3
 SRCS = algo_2_num.c apply_sort_in_a.c count_min_move_b.c move_a-b.c \
 			 pars_check_arg.c utils_2.c algo_3_num.c apply_sort_in_b.c len_of_num.c \
 			 move_a.c quote_arg.c apply_sort.c count_min_move_a.c main.c move_b.c \
-			 utils.c
+			 utils.c free_func.c
 OBJS = $(SRCS:%.c=%.o)
 NAME = push_swap
 RM = rm -f

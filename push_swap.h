@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 15:32:40 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/12 00:52:01 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/13 17:10:50 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,8 @@ int		apply_ra_rrb_in_b(t_stack *a, t_stack*b, int nb);
 void	apply_sort_in_b(t_stack *a, t_stack*b);
 void	apply_sort_in_a(t_stack *a, t_stack*b);
 int		right_pos_in_a(t_stack *a, int nb);
-void	apply_sort(t_stack *a, t_stack*b);
+void	apply_sort(t_stack *a, t_stack*b, int j);
+void	free_func(char **str, t_stack *a, t_stack *b);
+int		*free_arg(char **str, int *dtr);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 01:57:59 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/12 01:09:06 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/13 16:58:46 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,18 @@ void	put_first_on_top(t_stack *a)
 	}
 }
 
-void	apply_sort(t_stack *a, t_stack *b)
+void	apply_sort(t_stack *a, t_stack *b, int j)
 {
-	push_two(a, b);
-	apply_sort_in_b(a, b);
-	three_arg(a);
-	apply_sort_in_a(a, b);
-	put_first_on_top(a);
+	if (j == 2)
+		two_arg(a);
+	else if (j == 3)
+		three_arg(a);
+	else
+	{
+		push_two(a, b);
+		apply_sort_in_b(a, b);
+		three_arg(a);
+		apply_sort_in_a(a, b);
+		put_first_on_top(a);
+	}
 }
