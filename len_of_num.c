@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 13:24:48 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/14 15:30:15 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/14 19:43:30 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,9 @@ int	ft_skip_zero(char *str)
 	int	i;
 
 	i = 0;
-	if (str)
-	{
-		while (str[i] && str[i] == '0' && (str[i + 1]) && (str[i + 1]) == '0')
-			i++;
-		return (i);
-	}
-	else
-		return (0);
+	while (str[i] && str[i] == '0' && (str[i + 1]) && (str[i + 1]) == '0')
+		i++;
+	return (i);
 }
 
 int	check_over_under_int(int ac, char **av)
@@ -34,14 +29,12 @@ int	check_over_under_int(int ac, char **av)
 	char	*str;
 	char	*arg;
 
-	i = 0;
+	i = 1;
 	j = 0;
 	while (i < ac)
 	{
 		str = ft_itoa(ft_atoi(av[i]));
 		arg = av[i];
-		if (!arg || !str)
-			return (0);
 		if (*arg == '-' && str[j++] == '-')
 			arg++;
 		while (*arg && *arg == '0' && ft_strlen(arg) > 1)
