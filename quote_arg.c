@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 13:20:32 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/14 00:33:41 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/14 01:21:12 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,7 +111,7 @@ char	**check_arg(int ac, char *av[], int *len)
 			tmp = (ft_split(av[i], ' '));
 			while (tmp[k] != NULL)
 				str[j++] = tmp[k++];
-			ft_free(tmp);
+			free(tmp);
 			k = 0;
 		}
 		else
