@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 13:20:32 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/14 01:21:12 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/14 11:58:26 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,7 +115,7 @@ char	**check_arg(int ac, char *av[], int *len)
 			k = 0;
 		}
 		else
-			str[j++] = av[i];
+			str[j++] = ft_strdup(av[i]);
 		i++;
 	}
 	str[j] = NULL;

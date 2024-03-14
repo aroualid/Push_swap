@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 16:49:45 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/14 01:20:45 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/14 11:39:00 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	ft_free(char **tav)
 
 void	free_func(char **str, t_stack *a, t_stack *b)
 {
-	free(str);
+	ft_free(str);
 	free(a->data);
 	free(b->data);
 	free(a);

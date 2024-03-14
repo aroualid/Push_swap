@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 18:47:02 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/13 17:10:12 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/14 11:58:54 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	check_if_no_digit(char **str)
 				|| str[i][j] == '+'))
 			{
 				if ((str[i][j] == '-' || str[i][j] == '+')
-					&& (ft_isdigit(str[i][j - 1]) == 1
+					&& ((j > 0 && ft_isdigit(str[i][j - 1]))
 					|| ft_isdigit(str[i][j + 1]) == 0))
 					return (false);
 				j++;
@@ -48,6 +48,8 @@ int	*check_good_arg(int ac, char *av[])
 	int		j;
 
 	str = check_arg(ac, av, &j);
+	if(!str)	
+		return(0);
 	j = 0;
 	dtr = malloc(sizeof (int) * (size_to_malloc(ac, av) + 1));
 	i = 0;
@@ -62,6 +64,7 @@ int	*check_good_arg(int ac, char *av[])
 		while (str[i] != NULL)
 		{
 			dtr[i] = ft_atoi(str[i]);
+			free(str[i]);
 			i++;
 		}
 		free(str);
