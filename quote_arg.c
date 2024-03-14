@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 13:20:32 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/14 11:58:26 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/14 15:42:34 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,24 +100,23 @@ char	**check_arg(int ac, char *av[], int *len)
 	char	**str;
 	char	**tmp;
 
-	i = 1;
+	i = 0;
 	j = 0;
 	k = 0;
-	str = malloc(sizeof (char *) * (size_to_malloc(ac, av) + 1));
-	while (i < ac)
+	str = ft_calloc(sizeof (char *), (size_to_malloc(ac, av) + 1));
+	while (++i < ac)
 	{
 		if (is_quote(av[i]) == 1)
 		{
 			tmp = (ft_split(av[i], ' '));
+			if (!tmp || !str)
+				return (NULL);
 			while (tmp[k] != NULL)
 				str[j++] = tmp[k++];
-			free(tmp);
-			k = 0;
+			free_arg2(tmp, k);
 		}
-		else
+		else if (str)
 			str[j++] = ft_strdup(av[i]);
-		i++;
 	}
-	str[j] = NULL;
 	return (*len = j, str);
 }

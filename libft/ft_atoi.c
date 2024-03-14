@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:56:56 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/12 00:32:30 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/14 15:50:09 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,22 +21,22 @@ long	ft_atoi(const char *str)
 	i = 0;
 	sign = 1;
 	result = 0;
-	while (str[i] == ' ' || str[i] == '\f' || str[i] == '\n' || str[i] == '\r'
-		|| str[i] == '\t' || str[i] == '\v')
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	if (str)
 	{
-		if (str[i] == '-')
+		while (str[i] == ' ' || str[i] == '\f' || str[i] == '\n'
+			|| str[i] == '\r' || str[i] == '\t' || str[i] == '\v')
+			i++;
+		if (str[i] == '-' || str[i] == '+')
 		{
-			sign *= -1;
+			if (str[i] == '-')
+			{
+				sign *= -1;
+			}
+			i++;
 		}
-		i++;
+		while (str[i] >= '0' && str[i] <= '9')
+			result *= 10 + str[i++] - '0';
+		return (result * sign);
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		result *= 10;
-		result += str[i] - '0';
-		i++;
-	}
-	return (result * sign);
+	return (0);
 }

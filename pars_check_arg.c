@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 18:47:02 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/14 11:58:54 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/14 15:47:55 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,27 +48,24 @@ int	*check_good_arg(int ac, char *av[])
 	int		j;
 
 	str = check_arg(ac, av, &j);
-	if(!str)	
-		return(0);
+	if (!str)
+		return (0);
 	j = 0;
-	dtr = malloc(sizeof (int) * (size_to_malloc(ac, av) + 1));
+	dtr = ft_calloc(sizeof (int), (size_to_malloc(ac, av) + 1));
+	if (!dtr)
+		return (ft_free(str), NULL);
 	i = 0;
 	if (check_if_no_digit(str) == false
 		|| check_over_under_int(size_to_malloc(ac, av), str) == false)
-	{
-		write(2, "Error\n", 6);
-		return (free_arg(str, dtr));
-	}
+		return (write(2, "Error\n", 6), free_arg(str, dtr));
 	else
 	{
 		while (str[i] != NULL)
 		{
 			dtr[i] = ft_atoi(str[i]);
-			free(str[i]);
-			i++;
+			free(str[i++]);
 		}
-		free(str);
-		return (dtr);
+		return (free(str), dtr);
 	}
 }
 

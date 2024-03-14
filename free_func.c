@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 16:49:45 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/14 11:39:00 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/14 15:36:47 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,11 @@ int	*free_arg(char **str, int *dtr)
 	ft_free(str);
 	free(dtr);
 	return (false);
+}
+
+int	free_arg2(char **tmp, int k)
+{
+	free(tmp);
+	k = 0;
+	return (k);
 }

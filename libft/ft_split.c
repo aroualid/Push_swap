@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 11:36:31 by aroualid          #+#    #+#             */
-/*   Updated: 2023/11/27 13:22:16 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/14 14:55:36 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ static char	*ft_copy_word(const char *str, char sep, int *length)
 		str++;
 	len = str - start;
 	*length = len;
-	ptr = malloc(sizeof(char) * len + 1);
+	ptr = ft_calloc(sizeof(char), (len + 1));
 	if (!ptr)
 		return (NULL);
 	ft_strncpy(ptr, start, len);

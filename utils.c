@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 13:43:19 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/14 13:43:20 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/14 15:30:55 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,17 @@ void	ft_swap(int *a, int *b)
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
-	while (*s1 && *s2 && *s1 == *s2)
+	if (s1 && s2)
 	{
-		s1++;
-		s2++;
+		while (*s1 && *s2 && *s1 == *s2)
+		{
+			s1++;
+			s2++;
+		}
+		return (*(unsigned char *)s1 - *(unsigned char *)s2);
 	}
-	return (*(unsigned char *)s1 - *(unsigned char *)s2);
+	else
+		return (0);
 }
 
 int	check_empty_arguments(int ac, char **str)

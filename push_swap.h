@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 15:32:40 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/14 00:34:18 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/14 15:37:01 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,5 +89,5 @@ void	apply_sort(t_stack *a, t_stack*b, int j);
 void	free_func(char **str, t_stack *a, t_stack *b);
 int		*free_arg(char **str, int *dtr);
 void	ft_free(char **tav);
-
+int		free_arg2(char **tmp, int k);
 #endif
