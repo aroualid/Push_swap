@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 02:37:48 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/15 11:51:33 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/15 23:57:18 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int	count_min_move_a(t_stack *a, t_stack *b)
 	int	i;
 
 	i = 0;
-	if(b->data)
+	if (b->data)
 		cost = comb_ra_rb_a(a, b, b->data[i]);
 	while (i < b->size && b->data)
 	{

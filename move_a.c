@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 11:34:20 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/15 11:43:54 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/15 23:57:31 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	ft_pb(t_stack *a, t_stack *b)
 		b->data[i] = b->data[i - 1];
 		i--;
 	}
-	if(b->data)
+	if (b->data)
 		b->data[0] = temp;
 	write (1, "pb\n", 3);
 }
