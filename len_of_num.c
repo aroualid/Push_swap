@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 13:24:48 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/14 19:43:30 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/15 11:41:42 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,14 @@ int	check_over_under_int(int ac, char **av)
 	char	*str;
 	char	*arg;
 
-	i = 1;
+	i = 0;
 	j = 0;
 	while (i < ac)
 	{
 		str = ft_itoa(ft_atoi(av[i]));
 		arg = av[i];
+		if (!arg || !str)
+			return (0);
 		if (*arg == '-' && str[j++] == '-')
 			arg++;
 		while (*arg && *arg == '0' && ft_strlen(arg) > 1)

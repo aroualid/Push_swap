@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 13:32:12 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/14 19:31:18 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/15 14:25:14 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ int	main(int ac, char **av)
 	b->size = 0;
 	a->data = check_good_arg(ac, av);
 	b->data = ft_calloc(sizeof(int), j);
+	if (!b->data)
+			return (free_func(str, a, b), 0);
 	if (a->data == NULL)
 		return (free_func(str, a, b), 0);
 	else if (pars(a->data, ac, av) == false)

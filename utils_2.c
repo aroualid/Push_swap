@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 13:16:51 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/12 01:10:43 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/15 14:13:14 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	maxus(t_stack *stack)
 
 	i = 1;
 	index = 0;
-	while (i < stack->size)
+	while (i < stack->size && stack->data)
 	{
 		if (stack->data[index] > stack->data[i])
 			i++;
@@ -80,11 +80,11 @@ int	right_pos(t_stack *b, int nb)
 
 	i = 1;
 	j = 0;
-	if (nb > b->data[0] && nb < b->data[b->size - 1])
+	if (b->data && nb > b->data[0] && nb < b->data[b->size - 1])
 		return (0);
-	if (nb > b->data[maxus(b)] || nb < b->data[minus(b)])
+	if ((b->data) && (nb > b->data[maxus(b)] || nb < b->data[minus(b)]))
 		return (maxus(b));
-	while (nb > b->data[j] || nb < b->data[j + 1])
+	while ((b->data) && (nb > b->data[j] || nb < b->data[j + 1]))
 	{
 		i++;
 		j++;

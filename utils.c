@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 13:43:19 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/14 19:35:53 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/15 11:42:15 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ void	ft_swap(int *a, int *b)
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
-
 	while (*s1 && *s2 && *s1 == *s2)
 	{
 		s1++;

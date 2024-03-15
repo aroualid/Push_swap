@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 01:57:01 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/12 00:53:01 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/15 11:55:27 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void	apply_sort_in_a(t_stack *a, t_stack *b)
 	int	move;
 	int	i;
 
-	while (b->size > 0)
+	while (b->size > 0 && b->data)
 	{
 		i = 0;
 		move = count_min_move_a(a, b);
