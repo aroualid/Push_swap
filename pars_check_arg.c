@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 18:47:02 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/16 18:04:08 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/18 00:40:59 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int	*check_good_arg(int ac, char *av[])
 	i = 0;
 	if (check_if_no_digit(str) == false
 		|| check_over_under_int(size_to_malloc(ac, av), str) == false)
-		return (write(2, "Error\n", 6), free_arg(str, dtr));
+		return (write(2, URED "Error\n" RST, 15), free_arg(str, dtr));
 	else
 	{
 		while (str[i] != NULL)
@@ -133,7 +133,7 @@ int	pars(int *num, int ac, char **str)
 	}
 	if (check_duplicate(num, ac, str) == false
 		|| check_empty_arguments(ac, str) == false)
-		return (write(2, "Error\n", 6), false);
+		return (write(2, URED "Error\n" RST, 6), false);
 	if (check_sort(num, ac, str) == false || ac == 1)
 		return (false);
 	return (true);

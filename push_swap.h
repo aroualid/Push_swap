@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 15:32:40 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/17 05:06:32 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/18 00:37:48 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,14 @@
 # define BMAG "\x1b[1;35m"
 # define BCYN "\x1b[1;36m"
 # define BWHT "\x1b[1;37m"
-
+# define UBLK "\e[4;30m"
+# define URED "\e[4;31m"
+# define UGRN "\e[4;32m"
+# define UYEL "\e[4;33m"
+# define UBLU "\e[4;34m"
+# define UMAG "\e[4;35m"
+# define UCYN "\e[4;36m"
+# define UWHT "\e[4;37m"
 
 typedef struct t_stack
 {
