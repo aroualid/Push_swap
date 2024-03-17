@@ -6,9 +6,20 @@
 #    By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/26 17:33:50 by aroualid          #+#    #+#              #
-#    Updated: 2024/03/17 02:40:52 by aroualid         ###   ########.fr        #
+#    Updated: 2024/03/17 05:13:09 by aroualid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+LIGHT_RED=\033[1;31m
+LIGHT_GREEN=\033[1;32m
+LIGHT_YELLOW=\033[1;33m
+LIGHT_BLUE=\033[1;34m
+LIGHT_MAGENTA=\033[1;35m
+LIGHT_CYAN=\033[1;36m
+WHITE=\033[1;37m
+LIGHT_GRAY=\033[0;37m
+DARK_GRAY=\033[1;30m
+LIGHT_PURPLE=\033[1;35m
 
 CC = cc
 CFLAGS=  -Wall -Wextra -Werror  -g3
