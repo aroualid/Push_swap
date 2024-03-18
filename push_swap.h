@@ -6,7 +6,7 @@
 /*   By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 15:32:40 by aroualid          #+#    #+#             */
-/*   Updated: 2024/03/18 00:37:48 by aroualid         ###   ########.fr       */
+/*   Updated: 2024/03/18 13:36:45 by aroualid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,32 +17,6 @@
 # include "libft/libft.h"
 # include <stdio.h>
 # include <stdbool.h>
-
-# define BLK "\x1b[0;30m"
-# define RED "\x1b[0;31m"
-# define GRN "\x1b[0;32m"
-# define YEL "\x1b[0;33m"
-# define BLU "\x1b[0;34m"
-# define MAG "\x1b[0;35m"
-# define CYN "\x1b[0;36m"
-# define WHT "\x1b[0;37m"
-# define RST "\x1b[0m"
-# define BBLK "\x1b[1;30m"
-# define BRED "\x1b[1;31m"
-# define BGRN "\x1b[1;32m"
-# define BYEL "\x1b[1;33m"
-# define BBLU "\x1b[1;34m"
-# define BMAG "\x1b[1;35m"
-# define BCYN "\x1b[1;36m"
-# define BWHT "\x1b[1;37m"
-# define UBLK "\e[4;30m"
-# define URED "\e[4;31m"
-# define UGRN "\e[4;32m"
-# define UYEL "\e[4;33m"
-# define UBLU "\e[4;34m"
-# define UMAG "\e[4;35m"
-# define UCYN "\e[4;36m"
-# define UWHT "\e[4;37m"
 
 typedef struct t_stack
 {
