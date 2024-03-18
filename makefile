@@ -6,7 +6,7 @@
 #    By: aroualid <aroualid@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/26 17:33:50 by aroualid          #+#    #+#              #
-#    Updated: 2024/03/17 05:13:09 by aroualid         ###   ########.fr        #
+#    Updated: 2024/03/18 16:30:01 by aroualid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,18 @@ LIBFT_PATH = libft
 
 .PHONY: all clean fclean re libft
 
-all: libft $(NAME)
+all: libft $(NAME) 
+	@echo "$(LIGHT_CYAN)Starting tasks..."
+	@i=0; while [ $$i -le 100 ]; do \
+        echo -n "Progress: [$$i%] "; \
+        printf "$(LIGHT_GREEN)=%.0s" $$(seq 1 $$((i / 2))); \
+        printf " "; \
+        printf "$(LIGHT_BLUE)%.0s" $$(seq $$((i / 2 + 1)) 50); \
+        echo -n "\r"; \
+        sleep 0.02; \
+        i=$$((i+1)); \
+    done
+	@echo "$(LIGHT_MAGENTA)All tasks completed !                                                                "
 
 $(NAME): $(OBJS) 
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) -L$(LIBFT_PATH) -lft
