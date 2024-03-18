@@ -4,3 +4,4 @@ a.out
 .vscode
 .dist
 sujet.pdf
+*.a
