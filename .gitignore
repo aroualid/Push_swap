@@ -4,4 +4,4 @@ a.out
 .vscode
 .dist
 sujet.pdf
-*.a
+libft/libft.a
